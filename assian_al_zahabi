@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="ku" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ئاسیان الزەهەبی</title>
+
+<style>
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family:Arial,Tahoma,sans-serif;
+  background:#111;
+  color:#fff;
+  line-height:1.9
+}
+header{
+  background:#0b0b0b;
+  padding:20px;
+  text-align:center;
+  border-bottom:1px solid #c9a227
+}
+.logo{
+  font-size:28px;
+  font-weight:bold;
+  color:#d4af37
+}
+nav{
+  margin-top:15px;
+}
+nav a{
+  color:#fff;
+  text-decoration:none;
+  margin:0 8px;
+  font-size:15px
+}
+.hero{
+  min-height:520px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding:40px 20px;
+  background:linear-gradient(#000b,#000b),
+  url("https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=1600&q=80")
+  center/cover;
+}
+.hero h1{
+  font-size:42px;
+  color:#d4af37;
+  margin:0 0 15px
+}
+.hero p{
+  font-size:20px;
+  max-width:700px;
+  margin:auto
+}
+.btn{
+  display:inline-block;
+  margin-top:25px;
+  padding:12px 25px;
+  background:#d4af37;
+  color:#111;
+  text-decoration:none;
+  border-radius:6px;
+  font-weight:bold
+}
+section{
+  padding:70px 20px;
+  max-width:1100px;
+  margin:auto
+}
+h2{
+  text-align:center;
+  color:#d4af37;
+  font-size:30px;
+  margin-bottom:35px
+}
+.about{
+  text-align:center;
+  font-size:18px;
+  max-width:850px;
+  margin:auto
+}
+.cards{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px
+}
+.card{
+  background:#1b1b1b;
+  padding:25px;
+  border:1px solid #333;
+  border-radius:10px;
+  text-align:center
+}
+.card h3{
+  color:#d4af37
+}
+.contact{
+  text-align:center;
+  background:#181818;
+  max-width:none
+}
+.contact a{
+  color:#d4af37;
+  text-decoration:none
+}
+footer{
+  text-align:center;
+  padding:25px;
+  background:#080808;
+  color:#aaa
+}
+@media(max-width:700px){
+  .cards{grid-template-columns:1fr}
+  .hero h1{font-size:30px}
+  nav a{display:inline-block;margin:4px}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">ئاسیان الزەهەبی</div>
+  <nav>
+    <a href="#home">سەرەکی</a>
+    <a href="#about">دەربارەی ئێمە</a>
+    <a href="#products">بەرهەمەکان</a>
+    <a href="#workshops">کارگەکانمان</a>
+    <a href="#contact">پەیوەندی</a>
+  </nav>
+</header>
+
+<section class="hero" id="home">
+  <div>
+    <h1>ئاسیان الزەهەبی</h1>
+    <p>جۆرێکی نوێ لە کوالێتی و بازرگانی</p>
+    <p>بازرگانی و دروستکردنی پێداویستییەکانی ناوماڵ</p>
+    <a class="btn" href="#contact">پەیوەندی لەگەڵ ئێمە</a>
+  </div>
+</section>
+
+<section id="about">
+  <h2>دەربارەی ئێمە</h2>
+  <div class="about">
+    کۆمپانیای ئاسیان الزەهەبی کۆمپانیایەکی سەربەخۆی تایبەتە،
+    کار دەکات لە هاوردەکردن و بازرگانی قوماش و سەرجەم
+    پێداویستییەکانی ناوماڵ.
+    <br><br>
+    هەروەها توانای بەرهەمهێنانی چەندین جۆر پێداویستی
+    ناوماڵمان هەیە لە ڕێگەی کارگەکانمانەوە لە سلێمانی.
+  </div>
+</section>
+
+<section id="products">
+  <h2>بەرهەمەکان</h2>
+  <div class="cards">
+    <div class="card">
+      <h3>قوماش</h3>
+      <p>جۆرە جۆر قوماش بۆ پێداویستییەکانی ناوماڵ.</p>
+    </div>
+    <div class="card">
+      <h3>پێداویستی ناوماڵ</h3>
+      <p>بەرهەم و پێداویستییە جۆراوجۆرەکانی ناوماڵ.</p>
+    </div>
+    <div class="card">
+      <h3>بەرهەمی کارگەکان</h3>
+      <p>بەرهەمە دروستکراوەکانمان لە کارگەکانی سلێمانی.</p>
+    </div>
+  </div>
+</section>
+
+<section id="workshops">
+  <h2>کارگەکانمان</h2>
+  <div class="about">
+    توانای بەرهەمهێنانی چەندین جۆر پێداویستی ناوماڵمان هەیە
+    لە ڕێگەی کارگەکانمانەوە لە سلێمانی.
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <h2>پەیوەندی</h2>
+  <p>📍 کوردستان، سلێمانی</p>
+  <p>📞 <a href="tel:+9647721720505">0772 172 0505</a></p>
+  <p>
+    📘
+    <a href="https://www.facebook.com/share/1GZiqjBspx/" target="_blank">
+      Facebook ـی ئاسیان الزەهەبی
+    </a>
+  </p>
+</section>
+
+<footer>
+  © 2026 ئاسیان الزەهەبی — هەموو مافەکان پارێزراوە
+</footer>
+
+</body>
+</html>
