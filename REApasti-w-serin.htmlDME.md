@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="ku" dir="rtl">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>بەرگی پشتی مقلم - کۆمپانیای ئاسیان الزەهەبی</title>
+
+<style>
+
+body{
+font-family:Arial,Tahoma,sans-serif;
+background:#111;
+color:white;
+margin:0;
+line-height:1.8;
+}
+
+header{
+background:#000;
+padding:20px;
+text-align:center;
+border-bottom:2px solid #d4af37;
+}
+
+header img{
+width:75px;
+height:75px;
+object-fit:contain;
+border-radius:50%;
+border:2px solid #d4af37;
+background:white;
+}
+
+h1,h2{
+color:#d4af37;
+}
+
+nav{
+margin-top:15px;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin:0 8px;
+}
+
+section{
+max-width:1100px;
+margin:auto;
+padding:45px 20px;
+}
+
+.products{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+gap:20px;
+}
+
+.product{
+background:#1c1c1c;
+border:1px solid #444;
+border-radius:15px;
+overflow:hidden;
+text-align:center;
+}
+
+.product img{
+width:100%;
+height:250px;
+object-fit:cover;
+}
+
+.product p{
+color:#ddd;
+padding:10px;
+}
+
+.back{
+text-align:center;
+margin-top:35px;
+}
+
+.back a{
+display:inline-block;
+background:#d4af37;
+color:#111;
+text-decoration:none;
+padding:12px 25px;
+border-radius:10px;
+font-weight:bold;
+}
+
+footer{
+background:#000;
+text-align:center;
+padding:25px;
+color:#aaa;
+border-top:2px solid #d4af37;
+margin-top:40px;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+
+<img src="IMG-20260914-WA0016.jpg">
+
+<h1>کۆمپانیای ئاسیان الزەهەبی</h1>
+
+<small>ASSIAN AL-ZAHABI COMPANY</small>
+
+<nav>
+
+<a href="index.html">سەرەکی</a>
+
+</nav>
+
+</header>
+
+
+<section>
+
+<h2>بەرگی پشتی مقلم</h2>
+
+<div class="products">
+
+
+<div class="product">
+<img src="pasti-w-serin/IMG-20260917-WA0003.jpg">
+<p>بەرگی پشتی مقلم</p>
+</div>
+
+
+<div class="product">
+<img src="pasti-w-serin/IMG-20260917-WA0004.jpg">
+<p>بەرگی پشتی مقلم</p>
+</div>
+
+
+<div class="product">
+<img src="pasti-w-serin/IMG-20260917-WA0005.jpg">
+<p>بەرگی پشتی مقلم</p>
+</div>
+
+
+<div class="product">
+<img src="pasti-w-serin/IMG-20260917-WA0006.jpg">
+<p>بەرگی پشتی مقلم</p>
+</div>
+
+
+<div class="product">
+<img src="pasti-w-serin/IMG-20260917-WA0007.jpg">
+<p>بەرگی پشتی مقلم</p>
+</div>
+
+
+<div class="product">
+<img src="pasti-w-serin/IMG-20260917-WA0008.jpg">
+<p>بەرگی پشتی مقلم</p>
+</div>
+
+
+<div class="product">
+<img src="pasti-w-serin/IMG-20260917-WA0010.jpg">
+<p>بەرگی پشتی مقلم</p>
+</div>
+
+
+<div class="product">
+<img src="pasti-w-serin/IMG-20260917-WA0011.jpg">
+<p>بەرگی پشتی مقلم</p>
+</div>
+
+
+<div class="product">
+<img src="pasti-w-serin/IMG-20260917-WA0012.jpg">
+<p>بەرگی پشتی مقلم</p>
+</div>
+
+
+<div class="product">
+<img src="pasti-w-serin/IMG-20260917-WA0013.jpg">
+<p>بەرگی پشتی مقلم</p>
+</div>
+
+
+</div>
+
+
+<div class="back">
+
+<a href="index.html">
+گەڕانەوە بۆ سەرەکی
+</a>
+
+</div>
+
+</section>
+
+
+<footer>
+
+© کۆمپانیای ئاسیان الزەهەبی
+
+</footer>
+
+</body>
+</html>
+
+
