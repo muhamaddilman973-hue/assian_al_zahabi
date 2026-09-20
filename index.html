@@ -8,17 +8,17 @@
 <style>
 body {
     font-family: Arial, Tahoma, sans-serif;
-    background: #111;
+    background: #0b291a; /* سەوزی تۆخ بۆ باگراوەندی گشتی */
     color: white;
     margin: 0;
     line-height: 1.8;
 }
 
 header {
-    background: #000;
+    background: #06180f; /* سەوزی زۆر تۆخ بۆ سەرەوە */
     padding: 20px;
     text-align: center;
-    border-bottom: 2px solid #d4af37;
+    border-bottom: 2px solid #6b21a8; /* مۆری تۆخ */
 }
 
 header img {
@@ -26,12 +26,12 @@ header img {
     height: 80px;
     object-fit: contain;
     border-radius: 50%;
-    border: 2px solid #d4af37;
+    border: 2px solid #6b21a8;
     background: white;
 }
 
 h1, h2 {
-    color: #d4af37;
+    color: #e9d5ff; /* مۆری کاڵ یان سپی بۆ سەرنووسەکان */
 }
 
 nav {
@@ -39,14 +39,14 @@ nav {
 }
 
 nav a {
-    color: white;
+    color: #e2e8f0;
     text-decoration: none;
     margin: 0 10px;
     font-weight: bold;
 }
 
 nav a:hover {
-    color: #d4af37;
+    color: #c084fc;
 }
 
 section {
@@ -58,15 +58,16 @@ section {
 .hero {
     text-align: center;
     padding: 50px 20px;
-    background: #181818;
+    background: #103724; /* سەوزی تۆخی کاڵتر بۆ سەرەتا */
     border-radius: 15px;
     margin-bottom: 30px;
+    border: 1px solid #1e4632;
 }
 
 .about {
     text-align: center;
     font-size: 17px;
-    color: #ccc;
+    color: #cbd5e1;
 }
 
 .products {
@@ -76,15 +77,14 @@ section {
 }
 
 .product {
-    background: #1a1a1a;
-    border: 1px solid #333;
+    background: #103724; /* سەوزی تۆخ بۆ قاڵبی بەرهەمەکان */
+    border: 1px solid #1e4632;
     border-radius: 12px;
     overflow: hidden;
     text-align: center;
     box-shadow: 0 4px 10px rgba(0,0,0,0.5);
 }
 
-/* لێرەدا بەرزی جێگیر کراوه تا وێنەکان بە تەواوی و بێ بڕانەوە پڕ بە پڕ دەربکەون */
 .product img {
     width: 100%;
     height: auto;
@@ -93,15 +93,15 @@ section {
 }
 
 .product p {
-    color: #ddd;
+    color: #f1f5f9;
     padding: 12px;
     margin: 0;
     font-size: 15px;
 }
 
 .category {
-    background: #1a1a1a;
-    border: 2px solid #d4af37;
+    background: #103724;
+    border: 2px solid #6b21a8; /* چوارچێوە بە مۆری تۆخ */
     border-radius: 12px;
     padding: 25px;
     text-align: center;
@@ -109,26 +109,31 @@ section {
 }
 
 .category p {
-    color: #ccc;
+    color: #cbd5e1;
 }
 
 .category a {
     display: inline-block;
-    background: #d4af37;
-    color: #111;
+    background: #6b21a8; /* دوگمەکان بە مۆری تۆخ */
+    color: white;
     text-decoration: none;
     padding: 12px 25px;
     border-radius: 8px;
     font-weight: bold;
+    transition: 0.3s;
+}
+
+.category a:hover {
+    background: #581c87; /* مۆری تۆختر لە کاتی دەستبردن بە مۆشک */
 }
 
 .contact {
     text-align: center;
-    background: #181818;
+    background: #103724;
     border-radius: 15px;
     padding: 30px;
     margin-top: 40px;
-    border: 1px solid #333;
+    border: 1px solid #1e4632;
 }
 
 .contact p {
@@ -137,17 +142,17 @@ section {
 }
 
 .contact a {
-    color: #d4af37;
+    color: #d8b4fe; /* مۆری کاڵ بۆ لینکەکان بۆ ئەوەی دیار ببن */
     text-decoration: none;
     font-weight: bold;
 }
 
 footer {
-    background: #000;
+    background: #06180f;
     text-align: center;
     padding: 25px;
-    color: #888;
-    border-top: 2px solid #d4af37;
+    color: #94a3b8;
+    border-top: 2px solid #6b21a8;
     margin-top: 40px;
 }
 </style>
@@ -158,7 +163,7 @@ footer {
 <header>
 <img src="IMG-20260914-WA0016.jpg" alt="لۆگۆ">
 <h1>کۆمپانیای ئاسیان الزەهەبی</h1>
-<small style="color: #aaa;">ASSIAN AL-ZAHABI COMPANY</small>
+<small style="color: #94a3b8;">ASSIAN AL-ZAHABI COMPANY</small>
 <nav>
 <a href="#home">سەرەتا</a>
 <a href="#about">دەربارەی ئێمە</a>
