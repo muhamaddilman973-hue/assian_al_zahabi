@@ -6,157 +6,136 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>بەشی سەرقەنەفە - کۆمپانیای ئاسیان الزەهەبی</title>
 <style>
-:root {
-    --bg-color: #0f1015;
-    --card-bg: #181a20;
-    --accent-gold: #d4af37;
-    --text-main: #f3f4f6;
-    --text-muted: #9ca3af;
-    --border-color: #2e323b;
-}
-
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: var(--bg-color);
-    color: var(--text-main);
+    font-family: Arial, Tahoma, sans-serif;
+    background: #0b291a; /* سەوزی تۆخ بۆ باگراوەندی گشتی */
+    color: white;
     margin: 0;
     line-height: 1.8;
 }
 
 header {
-    background: linear-gradient(to bottom, #000000, #181a20);
-    padding: 30px 20px;
+    background: #06180f; /* سەوزی زۆر تۆخ بۆ سەرەوە */
+    padding: 20px;
     text-align: center;
-    border-bottom: 2px solid var(--accent-gold);
-    box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+    border-bottom: 2px solid #6b21a8; /* مۆری تۆخ */
 }
 
 header img {
-    width: 90px;
-    height: 90px;
+    width: 80px;
+    height: 80px;
     object-fit: contain;
     border-radius: 50%;
-    border: 2px solid var(--accent-gold);
+    border: 2px solid #6b21a8;
     background: white;
-    padding: 2px;
 }
 
 h1, h2 {
-    color: var(--accent-gold);
+    color: #e9d5ff; /* مۆری کاڵ یان سپی بۆ سەرنووسەکان */
 }
 
 nav {
-    margin-top: 20px;
+    margin-top: 15px;
 }
 
 nav a {
-    color: var(--text-main);
+    color: #e2e8f0;
     text-decoration: none;
-    margin: 0 12px;
-    font-weight: 600;
-    transition: 0.3s;
+    margin: 0 10px;
+    font-weight: bold;
 }
 
 nav a:hover {
-    color: var(--accent-gold);
+    color: #c084fc;
 }
 
 section {
-    max-width: 1200px;
+    max-width: 1100px;
     margin: auto;
-    padding: 50px 20px;
+    padding: 45px 20px;
 }
 
 .hero {
     text-align: center;
-    padding: 70px 20px;
-    background: linear-gradient(135deg, #181a20, #222630);
-    border-radius: 20px;
-    margin: 20px;
-    border: 1px solid var(--border-color);
+    padding: 50px 20px;
+    background: #103724; /* سەوزی تۆخی کاڵتر بۆ سەرەتا */
+    border-radius: 15px;
+    border: 1px solid #1e4632;
 }
 
 .products {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px;
+    gap: 25px;
     margin-top: 30px;
 }
 
 .product {
-    background: var(--card-bg);
-    border: 1px solid var(--border-color);
-    border-radius: 18px;
+    background: #103724; /* سەوزی تۆخ بۆ قاڵبی بەرهەمەکان */
+    border: 1px solid #1e4632;
+    border-radius: 12px;
     overflow: hidden;
     text-align: center;
-    box-shadow: 0 8px 25px rgba(0,0,0,0.3);
-    transition: transform 0.3s ease, border-color 0.3s ease;
-}
-
-.product:hover {
-    transform: translateY(-5px);
-    border-color: var(--accent-gold);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.5);
 }
 
 .product img {
     width: 100%;
-    height: 420px;
-    object-fit: contain;
+    height: auto; /* وێنەکان بە تەواوی و بێ بڕانەوە و پڕ بە پڕ دەردەکەون */
+    display: block;
     background: #000;
-    border-bottom: 1px solid var(--border-color);
 }
 
 .product p {
-    color: var(--text-main);
-    padding: 15px;
-    font-size: 16px;
-    font-weight: 500;
+    color: #f1f5f9;
+    padding: 12px;
+    margin: 0;
+    font-size: 15px;
 }
 
 .back-btn {
     display: inline-block;
-    background: var(--accent-gold);
-    color: #111;
+    background: #6b21a8; /* مۆری تۆخ بۆ دوگمەی گەڕانەوە */
+    color: white;
     text-decoration: none;
-    padding: 14px 30px;
-    border-radius: 12px;
+    padding: 12px 25px;
+    border-radius: 8px;
     font-weight: bold;
-    margin-top: 40px;
+    margin-top: 30px;
     transition: 0.3s;
 }
 
 .back-btn:hover {
-    background: #e6c547;
-    box-shadow: 0 0 15px rgba(212, 175, 55, 0.5);
+    background: #581c87;
 }
 
 .contact {
     text-align: center;
-    background: var(--card-bg);
-    border-radius: 20px;
-    margin-top: 50px;
-    padding: 40px;
-    border: 1px solid var(--border-color);
+    background: #103724;
+    border-radius: 15px;
+    margin-top: 40px;
+    padding: 30px;
+    border: 1px solid #1e4632;
 }
 
 .contact p {
-    font-size: 18px;
-    margin: 15px 0;
+    font-size: 16px;
+    margin: 10px 0;
 }
 
 .contact a {
-    color: var(--accent-gold);
+    color: #d8b4fe;
     text-decoration: none;
     font-weight: bold;
 }
 
 footer {
-    background: #000;
+    background: #06180f;
     text-align: center;
-    padding: 30px;
-    color: var(--text-muted);
-    border-top: 2px solid var(--accent-gold);
-    margin-top: 50px;
+    padding: 25px;
+    color: #94a3b8;
+    border-top: 2px solid #6b21a8;
+    margin-top: 40px;
 }
 </style>
 </head>
@@ -166,7 +145,7 @@ footer {
 <header>
 <img src="IMG-20260914-WA0016.jpg" alt="لۆگۆ">
 <h1>کۆمپانیای ئاسیان الزەهەبی</h1>
-<small style="color: var(--text-muted); letter-spacing: 2px;">ASSIAN AL-ZAHABI COMPANY</small>
+<small style="color: #94a3b8;">ASSIAN AL-ZAHABI COMPANY</small>
 <nav>
 <a href="index.html">سەرەتا</a>
 <a href="index.html#about">دەربارەی ئێمە</a>
@@ -186,37 +165,52 @@ footer {
 
 <!-- وێنە نوێکان (سەرقەنەفە فەروو پشت لاستیک اسڵی) -->
 <div class="product">
-<img src="sarqanafa/file_0000000001b482108b7c84cc3c288db1.png" alt="سەرقەنەفە">
+<img src="sarqanafa/IMG-20250703-WA0055.jpg" alt="سەرقەنەفە">
 <p>سەرقەنەفە فەروو پشت لاستیک اسڵی</p>
 </div>
 
 <div class="product">
-<img src="sarqanafa/file_0000000006e481f4b32718af2294ccf3.png" alt="سەرقەنەفە">
+<img src="sarqanafa/IMG-20250703-WA0057.jpg" alt="سەرقەنەفە">
 <p>سەرقەنەفە فەروو پشت لاستیک اسڵی</p>
 </div>
 
 <div class="product">
-<img src="sarqanafa/file_000000001bf8821095708bb6a33b7e9a.png" alt="سەرقەنەفە">
+<img src="sarqanafa/IMG-20250703-WA0062.jpg" alt="سەرقەنەفە">
 <p>سەرقەنەفە فەروو پشت لاستیک اسڵی</p>
 </div>
 
 <div class="product">
-<img src="sarqanafa/file_0000000020dc82109778c60fcddaab47.png" alt="سەرقەنەفە">
+<img src="sarqanafa/IMG-20250703-WA0063.jpg" alt="سەرقەنەفە">
 <p>سەرقەنەفە فەروو پشت لاستیک اسڵی</p>
 </div>
 
 <div class="product">
-<img src="sarqanafa/file_000000006a208210bc38e195fe50bbf7.png" alt="سەرقەنەفە">
+<img src="sarqanafa/IMG-20250703-WA0064.jpg" alt="سەرقەنەفە">
 <p>سەرقەنەفە فەروو پشت لاستیک اسڵی</p>
 </div>
 
 <div class="product">
-<img src="sarqanafa/file_00000000c8448210b1a3de60e4b028e9.png" alt="سەرقەنەفە">
+<img src="sarqanafa/IMG-20250703-WA0065.jpg" alt="سەرقەنەفە">
 <p>سەرقەنەفە فەروو پشت لاستیک اسڵی</p>
 </div>
 
 <div class="product">
-<img src="sarqanafa/file_00000000d67082109e55944d750a7ebe.png" alt="سەرقەنەفە">
+<img src="sarqanafa/IMG-20250703-WA0066.jpg" alt="سەرقەنەفە">
+<p>سەرقەنەفە فەروو پشت لاستیک اسڵی</p>
+</div>
+
+<div class="product">
+<img src="sarqanafa/IMG-20260503-WA0007.jpg" alt="سەرقەنەفە">
+<p>سەرقەنەفە فەروو پشت لاستیک اسڵی</p>
+</div>
+
+<div class="product">
+<img src="sarqanafa/20250703_165338.jpg" alt="سەرقەنەفە">
+<p>سەرقەنەفە فەروو پشت لاستیک اسڵی</p>
+</div>
+
+<div class="product">
+<img src="sarqanafa/20250703_165351.jpg" alt="سەرقەنەفە">
 <p>سەرقەنەفە فەروو پشت لاستیک اسڵی</p>
 </div>
 
@@ -247,11 +241,6 @@ footer {
 </div>
 
 <!-- وێنەکانی تری پێشوو (پشت شانە هەنگ) -->
-<div class="product">
-<img src="sarqanafa/IMG-20260503-WA0007.jpg" alt="سەرقەنەفە">
-<p>سەرقەنەفەی پشت شانە هەنگ کوالێتی بەرز</p>
-</div>
-
 <div class="product">
 <img src="sarqanafa/IMG-20260503-WA0008.jpg" alt="سەرقەنەفە">
 <p>سەرقەنەفەی پشت شانە هەنگ کوالێتی بەرز</p>
