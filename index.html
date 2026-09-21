@@ -63,7 +63,7 @@ nav a:hover {
 }
 
 section {
-    max-width: 1100px;
+    max-width: 900px;
     margin: auto;
     padding: 40px 20px;
 }
@@ -75,12 +75,6 @@ section {
     border-radius: 15px;
     margin-bottom: 30px;
     border: 1px solid #1e4632;
-    animation: fadeIn 1.5s ease;
-}
-
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(-20px); }
-    to { opacity: 1; transform: translateY(0); }
 }
 
 .about {
@@ -92,6 +86,102 @@ section {
     padding: 30px;
     border-radius: 12px;
     line-height: 2;
+}
+
+/* دیزاینی سڵایدشوو (Slideshow) */
+.slider-container {
+    position: relative;
+    max-width: 800px;
+    margin: auto;
+    background: #103724;
+    border: 2px solid #6b21a8;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.6);
+}
+
+.slide {
+    display: none;
+    text-align: center;
+}
+
+.slide img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    display: block;
+}
+
+.slide-caption {
+    color: #f1f5f9;
+    padding: 15px;
+    background: #06180f;
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0;
+}
+
+/* دوگمەکانی پێش و دواوە */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 45%;
+    transform: translateY(-50%);
+    width: auto;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 22px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    background-color: rgba(107, 33, 168, 0.7);
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev {
+    left: 0;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(107, 33, 168, 1);
+}
+
+/* خاڵەکانی ژێر سڵاید */
+.dot-container {
+    text-align: center;
+    padding: 15px;
+    background: #103724;
+}
+
+.dot {
+    cursor: pointer;
+    height: 12px;
+    width: 12px;
+    margin: 0 4px;
+    background-color: #384e42;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+.active, .dot:hover {
+    background-color: #c084fc;
+}
+
+/* ئەنیمەیشنی گۆڕانی سڵایدەکان */
+.fade {
+    animation-name: fade;
+    animation-duration: 1.2s;
+}
+
+@keyframes fade {
+    from {opacity: 0.4;}
+    to {opacity: 1;}
 }
 
 .category {
@@ -125,50 +215,6 @@ section {
 
 .category a:hover {
     background: #581c87;
-}
-
-.gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 20px;
-    margin-top: 20px;
-}
-
-.gallery-item {
-    background: #103724;
-    border: 1px solid #1e4632;
-    border-radius: 10px;
-    overflow: hidden;
-    text-align: center;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.5);
-    transition: transform 0.4s ease, box-shadow 0.4s ease;
-    animation: popUp 0.8s ease backwards;
-}
-
-.gallery-item:hover {
-    transform: translateY(-8px) scale(1.02);
-    box-shadow: 0 10px 25px rgba(107, 33, 168, 0.4);
-    border-color: #6b21a8;
-}
-
-.gallery-item img {
-    width: 100%;
-    height: 220px;
-    object-fit: cover;
-    display: block;
-    background: #000;
-    transition: transform 0.5s ease;
-}
-
-.gallery-item:hover img {
-    transform: scale(1.08);
-}
-
-.gallery-item p {
-    color: #f1f5f9;
-    padding: 12px;
-    margin: 0;
-    font-size: 14px;
 }
 
 .contact {
@@ -226,63 +272,75 @@ footer {
 <h2>دەربارەی ئێمە</h2>
 <p class="about">
 کۆمپانیای ئاسیان الزەهەبی کۆمپانیایەکی سەربەخۆی تایبەتە، کاردەکات لە هاوردەکردن و بازرگانی قوماش و سەرجەم پێداویستیەکانی ناوماڵ. وە خاوەنی چەندین کارگەی پڕۆفیشناڵ و مۆدێرنە کە بە ستافێکی شارەزا و بە ئەزمونەوە چەندین بەرهەمی مۆدێرن و کوالێتی بەرز و سەردەمیانە بەرهەمدەهێنیت.
-<br><br>
-<strong>مێژووی کۆمپانیاکەمان:</strong> کۆمپانیاکەمان لە ساڵی ٢٠٢٠ـەوە دامەزراوە؛ سەرەتا تەنها بە هاوردەکردنی کاڵا دەستمان پێکرد. دوای تەنها ٢ سال توانیمان چەند کارگەیەکی پێشکەوتوو لە شاری سلێمانی دابمەزرێنین کە چەندین هەلی کاری بەخشیوە بە گەنجانی شارەکەمان. کارگەکانمان لە ئاست کارگە پێشکەوتوەکانی وڵاتاندایە و توانای بەرهەمهێنانی چەندین جۆری دیزاین و ڕەنگ و قەبارەی جیاوازی هەیە لەسەر خواستی کڕیار.
-<br><br>
-خۆشبەختانە لە سەرجەم شار و شارۆچکەکانی کوردستان و شارەکانی عێراق چەندین جۆری چین و توێژەکان لە بەرهەمەکانمان سوودمەندن.
 </p>
 </section>
 
-<!-- بەشی پێشانگای وێنەکان بە ئەنیمەیشن و سەرجەم وێنەکانەوە -->
+<!-- بەشی سڵایدشۆوی وێنەکان (Slideshow) -->
 <section id="gallery">
 <h2 style="text-align: center;">assian-al-zahabi company</h2>
 <p style="text-align: center; color: #cbd5e1;">دیمەنێک لە دووکان و کارگە پێشکەوتووەکانی کۆمپانیای ئاسیان الزەهەبی</p>
 
-<div class="gallery-grid">
-    
-    <!-- وێنەی ١: دووکان -->
-    <div class="gallery-item">
-        <img src="دوووكان.jpeg" alt="پێشانگا و فرۆشگای سەرەکی کۆمپانیای ئاسیان الزەهەبی">
-        <p>پێشانگا و فرۆشگای سەرەکی کۆمپانیا</p>
+<div class="slider-container">
+
+    <!-- سڵایدی ١ -->
+    <div class="slide fade">
+        <img src="دوووكان.jpeg" alt="پێشانگا و فرۆشگای سەرەکی">
+        <p class="slide-caption">پێشانگا و فرۆشگای سەرەکی کۆمپانیا</p>
     </div>
 
-    <!-- وێنەی ٢: معمل 1 -->
-    <div class="gallery-item">
-        <img src="معمل 1.jpeg" alt="بەشی ئامێرە مۆدێرنەکان لە کارگەدا">
-        <p>بەشی ئامێرە مۆدێرنەکان لە کارگەدا</p>
+    <!-- سڵایدی ٢ -->
+    <div class="slide fade">
+        <img src="معمل 1.jpeg" alt="بەشی ئامێرە مۆدێرنەکان">
+        <p class="slide-caption">بەشی ئامێرە مۆدێرنەکان لە کارگەدا</p>
     </div>
 
-    <!-- وێنەی ٣: معمل 2 -->
-    <div class="gallery-item">
-        <img src="معمل 2.jpeg" alt="پرۆسەی ڕستن و ئامادەکردنی قوماش">
-        <p>پرۆسەی ڕستن و ئامادەکردنی قوماش</p>
+    <!-- سڵایدی ٣ -->
+    <div class="slide fade">
+        <img src="معمل 2.jpeg" alt="پرۆسەی ڕستن">
+        <p class="slide-caption">پرۆسەی ڕستن و ئامادەکردنی قوماش</p>
     </div>
 
-    <!-- وێنەی ٤: معمل 3 -->
-    <div class="gallery-item">
-        <img src="معمل 3.jpeg" alt="بەشی بڕین و وردکارکاری پیشەسازی">
-        <p>بەشی بڕین و وردکارکاری پیشەسازی</p>
+    <!-- سڵایدی ٤ -->
+    <div class="slide fade">
+        <img src="معمل 3.jpeg" alt="بەشی بڕین">
+        <p class="slide-caption">بەشی بڕین و وردکارکاری پیشەسازی</p>
     </div>
 
-    <!-- وێنەی ٥: معمل 4 -->
-    <div class="gallery-item">
-        <img src="معمل 4.jpeg" alt="هێڵی بەرهەمهێنانی پێداویستییەکانی ناوماڵ">
-        <p>هێڵی بەرهەمهێنانی پێداویستییەکانی ناوماڵ</p>
+    <!-- سڵایدی ٥ -->
+    <div class="slide fade">
+        <img src="معمل 4.jpeg" alt="هێڵی بەرهەمهێنان">
+        <p class="slide-caption">هێڵی بەرهەمهێنانی پێداویستییەکانی ناوماڵ</p>
     </div>
 
-    <!-- وێنەی ٦: معمل 5 -->
-    <div class="gallery-item">
-        <img src="معمل 5.jpeg" alt="ئامێری سەرەکی پڕۆژە لە کارگەدا">
-        <p>ئامێری سەرەکی پڕۆژە لە کارگەدا</p>
+    <!-- سڵایدی ٦ -->
+    <div class="slide fade">
+        <img src="معمل 5.jpeg" alt="ئامێری سەرەکی پڕۆژە">
+        <p class="slide-caption">ئامێری سەرەکی پڕۆژە لە کارگەدا</p>
     </div>
 
-    <!-- وێنەی ٧: معمل 6 -->
-    <div class="gallery-item">
-        <img src="معمل 6.jpeg" alt="بەشێکی تری کارگە پێشکەوتووەکەمان لە سلێمانی">
-        <p>بەشێکی تری کارگە پێشکەوتووەکەمان لە سلێمانی</p>
+    <!-- سڵایدی ٧ -->
+    <div class="slide fade">
+        <img src="معمل 6.jpeg" alt="بەشێکی تری کارگە">
+        <p class="slide-caption">بەشێکی تری کارگە پێشکەوتووەکەمان لە سلێمانی</p>
     </div>
+
+    <!-- دوگمەکانی پێش و دواوە -->
+    <a class="prev" onclick="plusSlides(-1)">&#10095;</a>
+    <a class="next" onclick="plusSlides(1)">&#10094;</a>
 
 </div>
+
+<!-- خاڵەکانی ژێر سڵاید -->
+<div class="dot-container">
+  <span class="dot" onclick="currentSlide(1)"></span>
+  <span class="dot" onclick="currentSlide(2)"></span>
+  <span class="dot" onclick="currentSlide(3)"></span>
+  <span class="dot" onclick="currentSlide(4)"></span>
+  <span class="dot" onclick="currentSlide(5)"></span>
+  <span class="dot" onclick="currentSlide(6)"></span>
+  <span class="dot" onclick="currentSlide(7)"></span>
+</div>
+
 </section>
 
 <section id="products">
@@ -344,6 +402,37 @@ footer {
 <footer>
 © کۆمپانیای ئاسیان الزەهەبی - سەرجەم مافەکان پارێزراون
 </footer>
+
+<!-- سکریپتی کارپێکردنی سڵایدشووی خۆکار -->
+<script>
+let slideIndex = 0;
+showSlides();
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides() {
+  let i;
+  let slides = document.getElementsByClassName("slide");
+  let dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 4000); // گۆڕینی وێنەکان هەموو ٤ چرکەیەک جارێک بە خۆکار
+}
+</script>
 
 </body>
 </html>
