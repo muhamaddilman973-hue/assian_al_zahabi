@@ -35,6 +35,11 @@ header img {
     border-radius: 50%;
     border: 2px solid #6b21a8;
     background: white;
+    transition: transform 0.5s ease;
+}
+
+header img:hover {
+    transform: rotate(360deg) scale(1.1);
 }
 
 h1, h2 {
@@ -50,6 +55,7 @@ nav a {
     text-decoration: none;
     margin: 0 10px;
     font-weight: bold;
+    transition: color 0.3s;
 }
 
 nav a:hover {
@@ -69,6 +75,12 @@ section {
     border-radius: 15px;
     margin-bottom: 30px;
     border: 1px solid #1e4632;
+    animation: fadeIn 1.5s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
 .about {
@@ -89,6 +101,11 @@ section {
     padding: 25px;
     text-align: center;
     margin-top: 30px;
+    transition: transform 0.3s;
+}
+
+.category:hover {
+    transform: translateY(-5px);
 }
 
 .category p {
@@ -124,6 +141,28 @@ section {
     overflow: hidden;
     text-align: center;
     box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    animation: popUp 0.8s ease backwards;
+}
+
+/* ئەنیمەیشنی دەرکەوتنی وێنەکان بەدوای یەکدا */
+.gallery-item:nth-child(1) { animation-delay: 0.1s; }
+.gallery-item:nth-child(2) { animation-delay: 0.2s; }
+.gallery-item:nth-child(3) { animation-delay: 0.3s; }
+.gallery-item:nth-child(4) { animation-delay: 0.4s; }
+.gallery-item:nth-child(5) { animation-delay: 0.5s; }
+.gallery-item:nth-child(6) { animation-delay: 0.6s; }
+.gallery-item:nth-child(7) { animation-delay: 0.7s; }
+
+@keyframes popUp {
+    from { opacity: 0; transform: scale(0.8); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+.gallery-item:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 10px 25px rgba(107, 33, 168, 0.4);
+    border-color: #6b21a8;
 }
 
 .gallery-item img {
@@ -132,6 +171,11 @@ section {
     object-fit: cover;
     display: block;
     background: #000;
+    transition: transform 0.5s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.08);
 }
 
 .gallery-item p {
@@ -203,7 +247,7 @@ footer {
 </p>
 </section>
 
-<!-- بەشی پێشانگای وێنەکان -->
+<!-- بەشی پێشانگای وێنەکان بە ئەنیمەیشن -->
 <section id="gallery">
 <h2 style="text-align: center;">assian-al-zahabi company</h2>
 <p style="text-align: center; color: #cbd5e1;">دیمەنێک لە دووکان و کارگە پێشکەوتووەکانی کۆمپانیای ئاسیان الزەهەبی</p>
@@ -308,7 +352,7 @@ footer {
 <p>📞 فەرمان: <a href="tel:07701486096">07701486096</a></p>
 <p>📞 دیلمان: <a href="tel:07721720505">07721720505</a></p>
 <p>📱 واتسئاپ: <a href="https://wa.me/9647721720505">07721720505</a></p>
-<p>📘 <a href="https://search.google.com/search-console/removals?resource_id=https%3A%2F%2Fmuhamaddilman973-hue.github.io%2Fassian_al_zahabi%2F8" target="_blank">فەیسبووک</a></p>
+<p>📘 <a href="https://www.facebook.com/share/1GZiqjBspx/" target="_blank">فەیسبووک</a></p>
 </section>
 
 <footer>
