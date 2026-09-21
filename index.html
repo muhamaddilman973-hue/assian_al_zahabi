@@ -65,9 +65,14 @@ section {
 }
 
 .about {
-    text-align: center;
-    font-size: 17px;
+    text-align: justify;
+    font-size: 16px;
     color: #cbd5e1;
+    background: #103724;
+    border: 1px solid #1e4632;
+    padding: 30px;
+    border-radius: 12px;
+    line-height: 2;
 }
 
 .category {
@@ -96,6 +101,37 @@ section {
 
 .category a:hover {
     background: #581c87;
+}
+
+/* بەشی پێشانگای وێنەکان لە پەڕەی سەرەکی */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.gallery-item {
+    background: #103724;
+    border: 1px solid #1e4632;
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    background: #000;
+}
+
+.gallery-item p {
+    color: #f1f5f9;
+    padding: 10px;
+    margin: 0;
+    font-size: 14px;
 }
 
 .contact {
@@ -138,7 +174,8 @@ footer {
 <nav>
 <a href="#home">سەرەتا</a>
 <a href="#about">دەربارەی ئێمە</a>
-<a href="#products">بەرهەمەکانمان</a>
+<a href="#gallery">وێنەکان</a>
+<a href="#products">بەرهەمەکان</a>
 <a href="#contact">پەیوەندی</a>
 </nav>
 </header>
@@ -151,10 +188,37 @@ footer {
 <section id="about">
 <h2>دەربارەی ئێمە</h2>
 <p class="about">
-کۆمپانیای ئاسیان الزەهەبی کۆمپانیایەکی سەربەخۆی تایبەتە، کاردەکات لە هاوردەکردن و بازرگانی قوماش و سەرجەم پێداویستیەکانی ناوماڵ.
+کۆمپانیای ئاسیان الزەهەبی کۆمپانیایەکی سەربەخۆی تایبەتە، کاردەکات لە هاوردەکردن و بازرگانی قوماش و سەرجەم پێداویستیەکانی ناوماڵ. وە خاوەنی چەندین کارگەی پڕۆفیشناڵ و مۆدێرنە کە بە ستافێکی شارەزا و بە ئەزمونەوە چەندین بەرهەمی مۆدێرن و کوالێتی بەرز و سەردەمیانە بەرهەمدەهێنیت.
 <br><br>
-توانای بەرهەمهێنانی چەندین جۆر پێداویستی ناوماڵمان هەیە لە ڕێگای کارگەکانمانەوە لە سلێمانی.
+<strong>مێژووی کۆمپانیاکەمان:</strong> کۆمپانیاکەمان لە ساڵی ٢٠٢٠ـەوە دامەزراوە؛ سەرەتا تەنها بە هاوردەکردنی کاڵا دەستمان پێکرد. دوای تەنها ٢ ساڵ توانیمان چەند کارگەیەکی پێشکەوتوو لە شاری سلێمانی دابمەزرێنین کە چەندین هەلی کاری بەخشیوە بە گەنجانی شارەکەمان. کارگەکانمان لە ئاست کارگە پێشکەوتوەکانی وڵاتاندایە و توانای بەرهەمهێنانی چەندین جۆری دیزاین و ڕەنگ و قەبارەی جیاوازی هەیە لەسەر خواستی کڕیار.
+<br><br>
+خۆشبەختانە لە سەرجەم شار و شارۆچکەکانی کوردستان و شارەکانی عێراق چەندین جۆری چین و توێژەکان لە بەرهەمەکانمان سوودمەندن.
 </p>
+</section>
+
+<!-- بەشی پێشانگای وێنەکان -->
+<section id="gallery">
+<h2 style="text-align: center;">پێشانگای وێنەکان</h2>
+<p style="text-align: center; color: #cbd5e1;">هەندێک لە وێنە و بەرهەمە سەرەکییەکانمان</p>
+
+<div class="gallery-grid">
+    
+    <div class="gallery-item">
+        <img src="sarsisam/aaa.jpeg" alt="سەرسیسەم">
+        <p>سەرسیسەمی ٤ وەرزە</p>
+    </div>
+
+    <div class="gallery-item">
+        <img src="sarsisam/سێتی فەروو1.webp" alt="سێتی فەروو">
+        <p>سێتی فەروو ٦ پارچە ئەسڵی</p>
+    </div>
+
+    <div class="gallery-item">
+        <img src="sarfarsh/فەرش١.webp" alt="فەرش">
+        <p>فەرش و سەرفەرشی بن لاستیک</p>
+    </div>
+
+</div>
 </section>
 
 <section id="products">
