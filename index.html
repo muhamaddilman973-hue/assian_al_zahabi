@@ -77,7 +77,7 @@ section {
     border: 1px solid #1e4632;
 }
 
-/* ستایلی نوێی سڵایدشوو: ئەمسەر بۆ ئەوسەر (Full Width) بێ سەهم و بێ خاڵ */
+/* سڵایدی پان (Full Width) لەگەڵ گەورەکردنی بەرزییەکەی لە سەرەوە و خوارەوە */
 .slider-container {
     position: relative;
     width: 100vw;
@@ -96,16 +96,16 @@ section {
 
 .slide img {
     width: 100%;
-    height: 500px;
+    height: 650px; /* زیادکردنی بەرزیی وێنەکە بۆ ئەوەی لە سەرەوە و خوارەوە گەورەتر دیار بێت */
     object-fit: cover;
     display: block;
 }
 
 .slide-caption {
     color: #f1f5f9;
-    padding: 15px;
-    background: rgba(6, 24, 15, 0.9);
-    font-size: 16px;
+    padding: 18px;
+    background: rgba(6, 24, 15, 0.85);
+    font-size: 18px;
     font-weight: bold;
     margin: 0;
     position: absolute;
@@ -187,10 +187,10 @@ footer {
     margin-top: 40px;
 }
 
-/* ڕێکخستنی شاشە بچووکەکان بۆ سڵاید */
+/* ڕێکخستنی شاشە بچووکەکان بۆ مۆبایل */
 @media (max-width: 768px) {
     .slide img {
-        height: 300px;
+        height: 400px;
     }
 }
 </style>
@@ -216,7 +216,7 @@ footer {
 <p>بازرگانی و دروستکردنی پێداویستیەکانی ناوماڵ</p>
 </section>
 
-<!-- بەشی سڵایدشۆوی پانی تەواو (Full Width) بێ سەهم و بێ خاڵ -->
+<!-- بەشی سڵایدشۆوی پان و گەورە -->
 <div class="slider-container" id="gallery">
 
     <!-- ١. دووکان -->
