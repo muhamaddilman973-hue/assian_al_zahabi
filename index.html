@@ -77,16 +77,16 @@ section {
     border: 1px solid #1e4632;
 }
 
-/* دیزاینی سڵایدشوو (Slideshow) */
+/* ستایلی نوێی سڵایدشوو: ئەمسەر بۆ ئەوسەر (Full Width) بێ سەهم و بێ خاڵ */
 .slider-container {
     position: relative;
-    max-width: 800px;
-    margin: auto;
-    background: #103724;
-    border: 2px solid #6b21a8;
-    border-radius: 15px;
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    margin-right: calc(-50vw + 50%);
+    background: #000;
     overflow: hidden;
     box-shadow: 0 10px 25px rgba(0,0,0,0.6);
+    margin-bottom: 40px;
 }
 
 .slide {
@@ -96,73 +96,22 @@ section {
 
 .slide img {
     width: 100%;
-    height: 420px;
+    height: 500px;
     object-fit: cover;
     display: block;
-    background: #000;
 }
 
 .slide-caption {
     color: #f1f5f9;
     padding: 15px;
-    background: #06180f;
+    background: rgba(6, 24, 15, 0.9);
     font-size: 16px;
     font-weight: bold;
     margin: 0;
-}
-
-/* دوگمەکانی پێش و دواوە */
-.prev, .next {
-    cursor: pointer;
     position: absolute;
-    top: 45%;
-    transform: translateY(-50%);
-    width: auto;
-    padding: 16px;
-    color: white;
-    font-weight: bold;
-    font-size: 22px;
-    transition: 0.6s ease;
-    border-radius: 0 3px 3px 0;
-    user-select: none;
-    background-color: rgba(107, 33, 168, 0.7);
-}
-
-.next {
-    right: 0;
-    border-radius: 3px 0 0 3px;
-}
-
-.prev {
-    left: 0;
-}
-
-.prev:hover, .next:hover {
-    background-color: rgba(107, 33, 168, 1);
-}
-
-/* خاڵەکانی ژێر سڵاید */
-.dot-container {
-    text-align: center;
-    padding: 15px;
-    background: #103724;
-    overflow-x: auto;
-    white-space: nowrap;
-}
-
-.dot {
-    cursor: pointer;
-    height: 10px;
-    width: 10px;
-    margin: 0 3px;
-    background-color: #384e42;
-    border-radius: 50%;
-    display: inline-block;
-    transition: background-color 0.3s ease;
-}
-
-.active, .dot:hover {
-    background-color: #c084fc;
+    bottom: 0;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 /* ئەنیمەیشنی گۆڕانی سڵایدەکان */
@@ -237,6 +186,13 @@ footer {
     border-top: 2px solid #6b21a8;
     margin-top: 40px;
 }
+
+/* ڕێکخستنی شاشە بچووکەکان بۆ سڵاید */
+@media (max-width: 768px) {
+    .slide img {
+        height: 300px;
+    }
+}
 </style>
 </head>
 
@@ -260,12 +216,8 @@ footer {
 <p>بازرگانی و دروستکردنی پێداویستیەکانی ناوماڵ</p>
 </section>
 
-<!-- بەشی سڵایدشۆوی گشتی (تەنها ئەو وێنە ڕەسەنانەی کە تۆ ناردووتن لەگەڵ دووکان و کارگە) -->
-<section id="gallery">
-<h2 style="text-align: center;">سەرجەم بەرهەم و دیمەنەکانی کۆمپانیا</h2>
-<p style="text-align: center; color: #cbd5e1;">بینینی دووکان، کارگە و بەرهەمەکان</p>
-
-<div class="slider-container">
+<!-- بەشی سڵایدشۆوی پانی تەواو (Full Width) بێ سەهم و بێ خاڵ -->
+<div class="slider-container" id="gallery">
 
     <!-- ١. دووکان -->
     <div class="slide fade">
@@ -363,33 +315,7 @@ footer {
         <p class="slide-caption">دیزاینی سێتی فەروو</p>
     </div>
 
-    <!-- دوگمەکانی پێش و دواوە -->
-    <a class="prev" onclick="plusSlides(-1)">&#10095;</a>
-    <a class="next" onclick="plusSlides(1)">&#10094;</a>
-
 </div>
-
-<!-- خاڵەکانی ژێر سڵاید -->
-<div class="dot-container">
-  <span class="dot" onclick="currentSlide(1)"></span>
-  <span class="dot" onclick="currentSlide(2)"></span>
-  <span class="dot" onclick="currentSlide(3)"></span>
-  <span class="dot" onclick="currentSlide(4)"></span>
-  <span class="dot" onclick="currentSlide(5)"></span>
-  <span class="dot" onclick="currentSlide(6)"></span>
-  <span class="dot" onclick="currentSlide(7)"></span>
-  <span class="dot" onclick="currentSlide(8)"></span>
-  <span class="dot" onclick="currentSlide(9)"></span>
-  <span class="dot" onclick="currentSlide(10)"></span>
-  <span class="dot" onclick="currentSlide(11)"></span>
-  <span class="dot" onclick="currentSlide(12)"></span>
-  <span class="dot" onclick="currentSlide(13)"></span>
-  <span class="dot" onclick="currentSlide(14)"></span>
-  <span class="dot" onclick="currentSlide(15)"></span>
-  <span class="dot" onclick="currentSlide(16)"></span>
-</div>
-
-</section>
 
 <section id="products">
 <h2>بەشەکانی بەرهەمەکانمان</h2>
@@ -451,40 +377,22 @@ footer {
 © کۆمپانیای ئاسیان الزەهەبی - سەرجەم مافەکان پارێزراون
 </footer>
 
-<!-- سکریپتی سڵایدشۆو -->
+<!-- سکریپتی سڵایدشۆوی خۆکار -->
 <script>
-let slideIndex = 1;
-showSlides(slideIndex);
+let slideIndex = 0;
+showSlides();
 
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
-
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
-
-function showSlides(n) {
+function showSlides() {
   let i;
   let slides = document.getElementsByClassName("slide");
-  let dots = document.getElementsByClassName("dot");
-  if (n > slides.length) {slideIndex = 1}    
-  if (n < 1) {slideIndex = slides.length}
   for (i = 0; i < slides.length; i++) {
     slides[i].style.display = "none";  
   }
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block";  
-  dots[slideIndex-1].className += " active";
-}
-
-// گۆڕینی خۆکار هەر ٤ چرکەیەک جارێک
-setInterval(() => {
   slideIndex++;
-  showSlides(slideIndex);
-}, 4000);
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  slides[slideIndex-1].style.display = "block";  
+  setTimeout(showSlides, 4000); // گۆڕینی خۆکار هەر ٤ چرکەیەک
+}
 </script>
 
 </body>
