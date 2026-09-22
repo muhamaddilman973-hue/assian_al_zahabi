@@ -85,6 +85,31 @@ section {
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
 }
 
+/* بەشی دەربارەی ئێمە */
+.about-section {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    padding: 40px;
+    margin-bottom: 40px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+.about-section h2 {
+    margin-top: 0;
+    font-size: 24px;
+    border-bottom: 2px solid #8b5cf6;
+    padding-bottom: 10px;
+    display: inline-block;
+}
+
+.about-section p {
+    color: #475569;
+    font-size: 16px;
+    margin-top: 15px;
+    text-align: justify;
+}
+
 /* سڵایدی پان (Full Width) و ڕێکخستنی قەبارەی وێنەکان */
 .slider-container {
     position: relative;
@@ -107,7 +132,7 @@ section {
 .slide img {
     width: 100%;
     height: 650px;
-    object-fit: contain; /* وێنەکە وەک خۆی دەهێڵێتەوە بێ ئەوەی ببڕدرێت */
+    object-fit: contain;
     display: block;
     background: #f1f5f9;
 }
@@ -126,7 +151,6 @@ section {
     border-top: 1px solid #e2e8f0;
 }
 
-/* ئەنیمەیشنی گۆڕانی سڵایدەکان */
 .fade {
     animation-name: fade;
     animation-duration: 1.2s;
@@ -214,7 +238,6 @@ footer {
     margin-top: 40px;
 }
 
-/* ڕێکخستنی شاشە بچووکەکان بۆ مۆبایل */
 @media (max-width: 768px) {
     .slide img {
         height: 400px;
@@ -241,6 +264,14 @@ footer {
 <section class="hero" id="home">
 <h1>کۆمپانیای ئاسیان الزەهەبی</h1>
 <p>بازرگانی و دروستکردنی پێداویستیەکانی ناوماڵ</p>
+</section>
+
+<!-- بەشی دەربارەی ئێمە -->
+<section class="about-section" id="about">
+    <h2>دەربارەی ئێمە</h2>
+    <p>
+        کۆمپانیای ئاسیان الزەهەبی یەکێکە لە کۆمپانیا پیشەنگەکان لە بواری هاوردەکردن، دابەشکردن و دروستکردنی سەرجەم پێداویستییەکانی ناوماڵ، قوماش، سەرسیسەم، فەرش، سەرقەنەفە و بەرگی جۆراوجۆر لە کوردستان. ئامانجی سەرەکی ئێمە دابینکردنی باشترین کوالێتی و مۆدێرنترین دیزاینە بۆ بەڕێز کڕیارەکانمان بە نرخێکی گونجاو و کێبڕکێکار.
+    </p>
 </section>
 
 <!-- بەشی سڵایدشۆوی پان -->
@@ -413,7 +444,7 @@ function showSlides() {
   slideIndex++;
   if (slideIndex > slides.length) {slideIndex = 1}    
   slides[slideIndex-1].style.display = "block";  
-  setTimeout(showSlides, 4000); // گۆڕینی خۆکار هەر ٤ چرکەیەک
+  setTimeout(showSlides, 4000);
 }
 </script>
 
