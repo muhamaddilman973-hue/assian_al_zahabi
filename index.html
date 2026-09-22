@@ -70,7 +70,7 @@ section {
 
 .hero {
     text-align: center;
-    padding: 50px 20px;
+    padding: 40px 20px;
     background: #103724;
     border-radius: 15px;
     margin-bottom: 30px;
@@ -107,7 +107,7 @@ section {
 
 .slide img {
     width: 100%;
-    height: 400px;
+    height: 420px;
     object-fit: cover;
     display: block;
 }
@@ -156,13 +156,15 @@ section {
     text-align: center;
     padding: 15px;
     background: #103724;
+    overflow-x: auto;
+    white-space: nowrap;
 }
 
 .dot {
     cursor: pointer;
-    height: 12px;
-    width: 12px;
-    margin: 0 4px;
+    height: 10px;
+    width: 10px;
+    margin: 0 3px;
     background-color: #384e42;
     border-radius: 50%;
     display: inline-block;
@@ -257,8 +259,8 @@ footer {
 <nav>
 <a href="#home">سەرەتا</a>
 <a href="#about">دەربارەی ئێمە</a>
-<a href="#gallery">وێنەکان</a>
-<a href="#products">بەرهەمەکان</a>
+<a href="#gallery">سڵایدی بەرهەمەکان</a>
+<a href="#products">جۆرەکان</a>
 <a href="#contact">پەیوەندی</a>
 </nav>
 </header>
@@ -268,60 +270,101 @@ footer {
 <p>بازرگانی و دروستکردنی پێداویستیەکانی ناوماڵ</p>
 </section>
 
-<section id="about">
-<h2>دەربارەی ئێمە</h2>
-<p class="about">
-کۆمپانیای ئاسیان الزەهەبی کۆمپانیایەکی سەربەخۆی تایبەتە، کاردەکات لە هاوردەکردن و بازرگانی قوماش و سەرجەم پێداویستیەکانی ناوماڵ. وە خاوەنی چەندین کارگەی پڕۆفیشناڵ و مۆدێرنە کە بە ستافێکی شارەزا و بە ئەزمونەوە چەندین بەرهەمی مۆدێرن و کوالێتی بەرز و سەردەمیانە بەرهەمدەهێنیت.
-</p>
-</section>
-
-<!-- بەشی سڵایدشۆوی وێنەکان (Slideshow) -->
+<!-- بەشی سڵایدشۆوی گشتی (هەموو وێنە کۆن و نوێکان) -->
 <section id="gallery">
-<h2 style="text-align: center;">assian-al-zahabi company</h2>
-<p style="text-align: center; color: #cbd5e1;">دیمەنێک لە دووکان و کارگە پێشکەوتووەکانی کۆمپانیای ئاسیان الزەهەبی</p>
+<h2 style="text-align: center;">سەرجەم بەرهەم و دیمەنەکانی کۆمپانیا</h2>
+<p style="text-align: center; color: #cbd5e1;">بینینی دووکان، کارگە و بەرهەمە مۆدێرنەکان</p>
 
 <div class="slider-container">
 
-    <!-- سڵایدی ١ -->
+    <!-- ١. دووکان -->
     <div class="slide fade">
-        <img src="دوووكان.jpeg" alt="پێشانگا و فرۆشگای سەرەکی">
+        <img src="دوووكان.jpeg" alt="دووکان">
         <p class="slide-caption">پێشانگا و فرۆشگای سەرەکی کۆمپانیا</p>
     </div>
 
-    <!-- سڵایدی ٢ -->
+    <!-- ٢. کارگە -->
     <div class="slide fade">
-        <img src="معمل 1.jpeg" alt="بەشی ئامێرە مۆدێرنەکان">
+        <img src="معمل 1.jpeg" alt="کارگە">
         <p class="slide-caption">بەشی ئامێرە مۆدێرنەکان لە کارگەدا</p>
     </div>
 
-    <!-- سڵایدی ٣ -->
+    <!-- ٣. سێتی فەروو ٢ -->
     <div class="slide fade">
-        <img src="معمل 2.jpeg" alt="پرۆسەی ڕستن">
-        <p class="slide-caption">پرۆسەی ڕستن و ئامادەکردنی قوماش</p>
+        <img src="سێتی فەروو2.webp" alt="سێتی فەروو">
+        <p class="slide-caption">سێتی فەرووی مۆدێرن</p>
     </div>
 
-    <!-- سڵایدی ٤ -->
+    <!-- ٤. سێتی فەروو ٣ -->
     <div class="slide fade">
-        <img src="معمل 3.jpeg" alt="بەشی بڕین">
-        <p class="slide-caption">بەشی بڕین و وردکارکاری پیشەسازی</p>
+        <img src="سێتی فەروو3.webp" alt="سێتی فەروو">
+        <p class="slide-caption">سێتی فەرووی کوالێتی بەرز</p>
     </div>
 
-    <!-- سڵایدی ٥ -->
+    <!-- ٥. سێتی فەروو ٥ -->
     <div class="slide fade">
-        <img src="معمل 4.jpeg" alt="هێڵی بەرهەمهێنان">
-        <p class="slide-caption">هێڵی بەرهەمهێنانی پێداویستییەکانی ناوماڵ</p>
+        <img src="سێتی فەروو5.jfif" alt="سێتی فەروو">
+        <p class="slide-caption">دیزاینی نوێی سێتی فەروو</p>
     </div>
 
-    <!-- سڵایدی ٦ -->
+    <!-- ٦. aaa 4 -->
     <div class="slide fade">
-        <img src="معمل 5.jpeg" alt="ئامێری سەرەکی پڕۆژە">
-        <p class="slide-caption">ئامێری سەرەکی پڕۆژە لە کارگەدا</p>
+        <img src="aaa (4).jpeg" alt="بەرهەم">
+        <p class="slide-caption">بەرهەم و کارەکانی کۆمپانیا</p>
     </div>
 
-    <!-- سڵایدی ٧ -->
+    <!-- ٧. aaa 5 -->
     <div class="slide fade">
-        <img src="معمل 6.jpeg" alt="بەشێکی تری کارگە">
-        <p class="slide-caption">بەشێکی تری کارگە پێشکەوتووەکەمان لە سلێمانی</p>
+        <img src="aaa (5).jpeg" alt="بەرهەم">
+        <p class="slide-caption">بەشی بەرهەمهێنانی قوماش و پێداویستی</p>
+    </div>
+
+    <!-- ٨. file 1 -->
+    <div class="slide fade">
+        <img src="file_0000000006e481f4b32718af2294ccf3.png" alt="بەرهەم">
+        <p class="slide-caption">نموونەی بەرهەمی نوێ</p>
+    </div>
+
+    <!-- ٩. file 2 -->
+    <div class="slide fade">
+        <img src="file_000000001bf8821095708bb6a33b7e9a.png" alt="بەرهەم">
+        <p class="slide-caption">دیزاینی تایبەت بۆ ناوماڵ</p>
+    </div>
+
+    <!-- ١٠. file 3 -->
+    <div class="slide fade">
+        <img src="file_0000000020dc82109778c60fc" alt="بەرهەم">
+        <p class="slide-caption">کۆمەڵەی نوێی کاڵاکان</p>
+    </div>
+
+    <!-- ١١. image 1 -->
+    <div class="slide fade">
+        <img src="1788188770155.jpg" alt="بەرهەم">
+        <p class="slide-caption">کار و بەرهەمی ڕەنگاوڕەنگ</p>
+    </div>
+
+    <!-- ١٢. image 2 -->
+    <div class="slide fade">
+        <img src="1788265914586.jpg" alt="بەرهەم">
+        <p class="slide-caption">پێداویستی و مۆدێلی سەردەم</p>
+    </div>
+
+    <!-- ١٣. image 3 -->
+    <div class="slide fade">
+        <img src="1788266101914.jpg" alt="بەرهەم">
+        <p class="slide-caption">بەرهەمی ئەسڵی و کوالێتی بەرز</p>
+    </div>
+
+    <!-- ١٤. file 4 -->
+    <div class="slide fade">
+        <img src="file_000000003e5081f68b6dc65d3d13c250.png" alt="بەرهەم">
+        <p class="slide-caption">دیمەنێکی تری کارەکانمان</p>
+    </div>
+
+    <!-- ١٥. file 5 -->
+    <div class="slide fade">
+        <img src="file_00000000529081f5bd88c619ddbceb2d.png" alt="بەرهەم">
+        <p class="slide-caption">نموونەی دیزاین و قوماش</p>
     </div>
 
     <!-- دوگمەکانی پێش و دواوە -->
@@ -330,7 +373,7 @@ footer {
 
 </div>
 
-<!-- خاڵەکانی ژێر سڵاید -->
+<!-- خاڵەکانی ژێر سڵاید (١٥ دانە بۆ هەموو وێنەکان) -->
 <div class="dot-container">
   <span class="dot" onclick="currentSlide(1)"></span>
   <span class="dot" onclick="currentSlide(2)"></span>
@@ -339,12 +382,20 @@ footer {
   <span class="dot" onclick="currentSlide(5)"></span>
   <span class="dot" onclick="currentSlide(6)"></span>
   <span class="dot" onclick="currentSlide(7)"></span>
+  <span class="dot" onclick="currentSlide(8)"></span>
+  <span class="dot" onclick="currentSlide(9)"></span>
+  <span class="dot" onclick="currentSlide(10)"></span>
+  <span class="dot" onclick="currentSlide(11)"></span>
+  <span class="dot" onclick="currentSlide(12)"></span>
+  <span class="dot" onclick="currentSlide(13)"></span>
+  <span class="dot" onclick="currentSlide(14)"></span>
+  <span class="dot" onclick="currentSlide(15)"></span>
 </div>
 
 </section>
 
 <section id="products">
-<h2>بەرهەمەکانمان</h2>
+<h2>بەشەکانی بەرهەمەکانمان</h2>
 
 <div class="category">
 <h2>سەرسیسەم و سێتی فەروو</h2>
@@ -403,7 +454,7 @@ footer {
 © کۆمپانیای ئاسیان الزەهەبی - سەرجەم مافەکان پارێزراون
 </footer>
 
-<!-- سکریپتی کارپێکردنی سڵایدشووی خۆکار -->
+<!-- سکریپتی سڵایدشۆو -->
 <script>
 let slideIndex = 0;
 showSlides();
@@ -430,7 +481,7 @@ function showSlides() {
   }
   slides[slideIndex-1].style.display = "block";  
   dots[slideIndex-1].className += " active";
-  setTimeout(showSlides, 4000); // گۆڕینی وێنەکان هەموو ٤ چرکەیەک جارێک بە خۆکار
+  setTimeout(showSlides, 4000); // گۆڕینی خۆکار هەر ٤ چرکەیەک
 }
 </script>
 
