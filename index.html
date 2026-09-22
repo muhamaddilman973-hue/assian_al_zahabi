@@ -77,13 +77,13 @@ section {
     border: 1px solid #1e4632;
 }
 
-/* سڵایدی زۆر گەورە و پان (Full Width) */
+/* سڵایدی پان (Full Width) و ڕێکخستنی قەبارەی وێنەکان بە جۆرێک هیچ بەشێکیان نەبڕدرێت */
 .slider-container {
     position: relative;
     width: 100vw;
     margin-left: calc(-50vw + 50%);
     margin-right: calc(-50vw + 50%);
-    background: #000;
+    background: #06180f; /* پاشبنەمایەکی هاوسەنگ بۆ بۆشاییەکانی لاوەکی ئەگەر هەبن */
     overflow: hidden;
     box-shadow: 0 10px 25px rgba(0,0,0,0.6);
     margin-bottom: 40px;
@@ -96,15 +96,16 @@ section {
 
 .slide img {
     width: 100%;
-    height: 850px; /* زۆر گەورەکردنی بەرزیی وێنەکان لە سەرەوە و خوارەوە */
-    object-fit: cover;
+    height: 700px; /* بەرزیی گەورە بۆ ڕوونی و جوانی */
+    object-fit: contain; /* دڵنیابوون لەوەی تەواوی وێنەکە لە سەرەوە بۆ خوارەوە دەردەکەوێت و هیچ نابڕدرێت */
     display: block;
+    background: #0b1d14;
 }
 
 .slide-caption {
     color: #f1f5f9;
     padding: 20px;
-    background: rgba(6, 24, 15, 0.88);
+    background: rgba(6, 24, 15, 0.92);
     font-size: 20px;
     font-weight: bold;
     margin: 0;
@@ -190,7 +191,7 @@ footer {
 /* ڕێکخستنی شاشە بچووکەکان بۆ مۆبایل */
 @media (max-width: 768px) {
     .slide img {
-        height: 500px;
+        height: 420px;
     }
 }
 </style>
@@ -216,7 +217,7 @@ footer {
 <p>بازرگانی و دروستکردنی پێداویستیەکانی ناوماڵ</p>
 </section>
 
-<!-- بەشی سڵایدشۆوی زۆر گەورە و پان -->
+<!-- بەشی سڵایدشۆوی پان و تەواو کە وێنەکان نابڕدرێن -->
 <div class="slider-container" id="gallery">
 
     <!-- ١. دووکان -->
