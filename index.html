@@ -90,53 +90,57 @@ section {
     padding: 40px 20px;
 }
 
+/* دیزاینی نوێ و شاهانەی بەشی Hero Section (بانەری سەرەکی) */
 .hero {
     text-align: center;
-    padding: 40px 20px;
-    background: #ffffff;
-    border-radius: 16px;
-    margin-bottom: 30px;
-    border: 1px solid #e2e8f0;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
-}
-
-/* ئەنیمەیشنی سەرنجڕاکێش و بریقەدار بۆ ڕستەی داواکراو */
-.animated-banner {
-    text-align: center;
-    padding: 25px 20px;
-    background: linear-gradient(135deg, #111111, #1e1e1e);
-    border-radius: 14px;
-    margin: 0 0 30px 0;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-    border: 1px solid #d4af37;
+    padding: 70px 30px;
+    background: radial-gradient(circle at center, #1e293b 0%, #090d16 100%);
+    color: #ffffff;
+    border-radius: 24px;
+    margin: 30px auto;
+    max-width: 1100px;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.35);
+    position: relative;
     overflow: hidden;
+    border: 1px solid rgba(212, 175, 55, 0.3);
 }
 
-.glowing-text {
-    font-size: 20px;
-    font-weight: bold;
-    background: linear-gradient(90deg, #fff, #d4af37, #fff, #d4af37);
-    background-size: 300% auto;
-    color: transparent;
+/* هێڵی ڕووناکی جوان لە دەورووبەری بانەرەکە */
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, #d4af37, transparent);
+}
+
+.hero h1 {
+    font-size: 38px;
+    font-weight: 800;
+    background: linear-gradient(135deg, #ffffff 30%, #e2e8f0 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    animation: shine 5s linear infinite, floatText 3s ease-in-out infinite alternate;
+    margin-bottom: 15px;
+    letter-spacing: 0.5px;
+}
+
+.hero .hero-subtitle {
+    font-size: 20px;
+    font-weight: 600;
+    background: linear-gradient(90deg, #d4af37, #f3e7c4, #d4af37);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: goldShine 4s linear infinite;
     margin: 0;
     letter-spacing: 0.5px;
 }
 
-@keyframes shine {
+@keyframes goldShine {
     to {
-        background-position: 300% center;
-    }
-}
-
-@keyframes floatText {
-    0% {
-        transform: translateY(0);
-    }
-    100% {
-        transform: translateY(-3px);
+        background-position: 200% center;
     }
 }
 
@@ -313,7 +317,13 @@ footer {
     .slide img {
         height: 400px;
     }
-    .glowing-text {
+    .hero {
+        padding: 45px 20px;
+    }
+    .hero h1 {
+        font-size: 26px;
+    }
+    .hero .hero-subtitle {
         font-size: 16px;
     }
 }
@@ -339,13 +349,10 @@ footer {
     </div>
 </header>
 
+<!-- بەشی سەرەتا (Hero Section) بە دیزاینێکی تاریق و زێڕینی شاهانە -->
 <section class="hero" id="home">
     <h1>کۆمپانیای ئاسیان الزەهەبی</h1>
-    
-    <!-- بەشی ئەنیمەیشنی ڕستەی داواکراو -->
-    <div class="animated-banner">
-        <p class="glowing-text">کۆمپانیای ئسیان الزەهەبی بازرگانی و دروستکردنی پێداویستیەکانی ناوماڵ</p>
-    </div>
+    <p class="hero-subtitle">بۆ بازرگانی قوماش و پێداویستیەکانی ناوماڵ</p>
 </section>
 
 <!-- بەشی دەربارەی ئێمە -->
