@@ -25,8 +25,10 @@ body {
 header {
     background: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(10px);
-    padding: 20px 40px;
-    text-align: center;
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     border-bottom: 1px solid #e2e8f0;
     position: sticky;
     top: 0;
@@ -34,9 +36,15 @@ header {
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
 }
 
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
 header img {
-    width: 80px;
-    height: 80px;
+    width: 60px;
+    height: 60px;
     object-fit: contain;
     border-radius: 50%;
     border: 3px solid #8b5cf6;
@@ -48,18 +56,25 @@ header img:hover {
     transform: rotate(360deg) scale(1.1);
 }
 
-h1, h2 {
+.company-titles h1 {
+    font-size: 18px;
     color: #0f172a;
+    margin: 0;
+}
+
+.company-titles small {
+    color: #64748b;
+    font-size: 12px;
 }
 
 nav {
-    margin-top: 15px;
+    display: flex;
+    gap: 20px;
 }
 
 nav a {
     color: #64748b;
     text-decoration: none;
-    margin: 0 12px;
     font-weight: 600;
     font-size: 15px;
     transition: color 0.3s;
@@ -239,6 +254,14 @@ footer {
 }
 
 @media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+    nav {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
     .slide img {
         height: 400px;
     }
@@ -249,16 +272,20 @@ footer {
 <body>
 
 <header>
-<img src="logo.jpg" alt="لۆگۆ">
-<h1>کۆمپانیای ئاسیان الزەهەبی</h1>
-<small style="color: #64748b;">assian-al-zahabi company</small>
-<nav>
-<a href="#home">سەرەتا</a>
-<a href="#about">دەربارەی ئێمە</a>
-<a href="#gallery">سڵایدی بەرهەمەکان</a>
-<a href="#products">جۆرەکان</a>
-<a href="#contact">پەیوەندی</a>
-</nav>
+    <nav>
+        <a href="#home">سەرەتا</a>
+        <a href="#about">دەربارەی ئێمە</a>
+        <a href="#gallery">سڵایدی بەرهەمەکان</a>
+        <a href="#products">جۆرەکان</a>
+        <a href="#contact">پەیوەندی</a>
+    </nav>
+    <div class="logo-area">
+        <div class="company-titles" style="text-align: left;">
+            <h1>کۆمپانیای ئاسیان الزەهەبی</h1>
+            <small>assian-al-zahabi company</small>
+        </div>
+        <img src="logo.jpg" alt="لۆگۆ">
+    </div>
 </header>
 
 <section class="hero" id="home">
