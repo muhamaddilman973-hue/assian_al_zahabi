@@ -6,86 +6,84 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>بەرگی پشتی و سەرین - کۆمپانیای ئاسیان الزەهەبی</title>
 <style>
-body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    background-color: #f8fafc;
-    color: #1e293b;
-    margin: 0;
-    line-height: 1.8;
+body{
+    font-family:Arial,Tahoma,sans-serif;
+    background:#111;
+    color:white;
+    margin:0;
+    line-height:1.8;
 }
-
-header {
-    background: rgba(255, 255, 255, 0.95);
-    padding: 20px 40px;
-    text-align: center;
-    border-bottom: 1px solid #e2e8f0;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+header{
+    background:#000;
+    padding:20px;
+    text-align:center;
+    border-bottom:2px solid #d4af37;
 }
-
-header a {
-    color: #7c3aed;
-    text-decoration: none;
-    font-weight: bold;
+header img{
+    width:75px;
+    height:75px;
+    object-fit:contain;
+    border-radius:50%;
+    border:2px solid #d4af37;
+    background:white;
 }
-
-.container {
-    max-width: 1200px;
-    margin: auto;
-    padding: 40px 20px;
+h1,h2{
+    color:#d4af37;
 }
-
-h1 {
-    text-align: center;
-    color: #0f172a;
-    margin-bottom: 40px;
+nav{
+    margin-top:15px;
 }
-
-.gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 25px;
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:0 8px;
 }
-
-.gallery-item {
-    background: #ffffff;
-    border: 1px solid #e2e8f0;
-    border-radius: 16px;
-    overflow: hidden;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
-    transition: transform 0.3s ease;
+section{
+    max-width:1100px;
+    margin:auto;
+    padding:45px 20px;
 }
-
-.gallery-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+.products{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+    gap:20px;
 }
-
-.gallery-item img {
-    width: 100%;
-    height: 300px;
-    object-fit: cover;
-    display: block;
-    background: #f1f5f9;
+.product{
+    background:#1c1c1c;
+    border:1px solid #444;
+    border-radius:15px;
+    overflow:hidden;
+    text-align:center;
 }
-
-.gallery-caption {
-    padding: 15px;
-    text-align: center;
-    font-weight: bold;
-    color: #334155;
-    background: #ffffff;
-    border-top: 1px solid #f1f5f9;
+.product img{
+    width:100%;
+    height:250px;
+    object-fit:cover;
 }
-
-footer {
-    background: #ffffff;
-    text-align: center;
-    padding: 25px;
-    color: #64748b;
-    border-top: 1px solid #e2e8f0;
-    margin-top: 40px;
+.product p{
+    color:#ddd;
+    padding:10px;
+}
+.back{
+    text-align:center;
+    margin-top:35px;
+}
+.back a{
+    display:inline-block;
+    background:#d4af37;
+    color:#111;
+    text-decoration:none;
+    padding:12px 25px;
+    border-radius:10px;
+    font-weight:bold;
+}
+footer{
+    background:#000;
+    text-align:center;
+    padding:25px;
+    color:#aaa;
+    border-top:2px solid #d4af37;
+    margin-top:40px;
 }
 </style>
 </head>
@@ -93,57 +91,63 @@ footer {
 <body>
 
 <header>
-    <a href="index.html">← گەڕانەوە بۆ ماڵپەڕی سەرەکی</a>
-    <h1>بەشی بەرگی پشتی و سەرین</h1>
+    <img src="IMG-20260914-WA0016.jpg" alt="لۆگۆ">
+    <h1>کۆمپانیای ئاسیان الزەهەبی</h1>
+    <small>ASSIAN AL-ZAHABI COMPANY</small>
+    <nav>
+        <a href="index.html">سەرەکی</a>
+    </nav>
 </header>
 
-<div class="container">
-    <div class="gallery-grid">
-
-        <!-- وێنە نوێیەکانی کوردی -->
-        <div class="gallery-item">
-            <img src="كوردي 1.jpeg" alt="کوردی ١">
-            <div class="gallery-caption">بەرگی پشتی و سەرین - مۆدێلی کوردی ١</div>
-        </div>
-
-        <div class="gallery-item">
-            <img src="كوردي 2.jpeg" alt="کوردی ٢">
-            <div class="gallery-caption">بەرگی پشتی و سەرین - مۆدێلی کوردی ٢</div>
-        </div>
-
-        <div class="gallery-item">
-            <img src="كوردي 3.jpeg" alt="کوردی ٣">
-            <div class="gallery-caption">بەرگی پشتی و سەرین - مۆدێلی کوردی ٣</div>
-        </div>
-
-        <div class="gallery-item">
-            <img src="كوردي 4.jpeg" alt="کوردی ٤">
-            <div class="gallery-caption">بەرگی پشتی و سەرین - مۆدێلی کوردی ٤</div>
-        </div>
-
-        <div class="gallery-item">
-            <img src="كوردي 5.jpeg" alt="کوردی ٥">
-            <div class="gallery-caption">بەرگی پشتی و سەرین - مۆدێلی کوردی ٥</div>
-        </div>
-
-        <!-- وێنە سەرەکی و کۆنەکانی بەشی پشتی و سەرین -->
-        <div class="gallery-item">
-            <img src="pasti-w-serin/file_0000000004ac82109c2a87a9be5a68ef.png" alt="پشتی و سەرین">
-            <div class="gallery-caption">پشتی و سەرینی کوردی</div>
-        </div>
-
-        <div class="gallery-item">
-            <img src="pasti-w-serin/IMG-20260917-WA0013.jpg" alt="پشتی و سەرین">
-            <div class="gallery-caption">دیزاینی پشتی و سەرین</div>
-        </div>
-
-        <div class="gallery-item">
-            <img src="pasti-w-serin/1788182642114.jpg" alt="پشتی و سەرین">
-            <div class="gallery-caption">نموونەی تری پشتی و سەرین</div>
-        </div>
-
+<section>
+    <h2>بەرگی پشتی مقلم</h2>
+    <div class="products">
+        <div class="product"><img src="pasti-w-serin/IMG-20260917-WA0003.jpg"><p>بەرگی پشتی مقلم</p></div>
+        <div class="product"><img src="pasti-w-serin/IMG-20260917-WA0004.jpg"><p>بەرگی پشتی مقلم</p></div>
+        <div class="product"><img src="pasti-w-serin/IMG-20260917-WA0005.jpg"><p>بەرگی پشتی مقلم</p></div>
+        <div class="product"><img src="pasti-w-serin/IMG-20260917-WA0006.jpg"><p>بەرگی پشتی مقلم</p></div>
+        <div class="product"><img src="pasti-w-serin/IMG-20260917-WA0007.jpg"><p>بەرگی پشتی مقلم</p></div>
+        <div class="product"><img src="pasti-w-serin/IMG-20260917-WA0008.jpg"><p>بەرگی پشتی مقلم</p></div>
+        <div class="product"><img src="pasti-w-serin/IMG-20260917-WA0010.jpg"><p>بەرگی پشتی مقلم</p></div>
+        <div class="product"><img src="pasti-w-serin/IMG-20260917-WA0011.jpg"><p>بەرگی پشتی مقلم</p></div>
+        <div class="product"><img src="pasti-w-serin/IMG-20260917-WA0012.jpg"><p>بەرگی پشتی مقلم</p></div>
+        <div class="product"><img src="pasti-w-serin/IMG-20260917-WA0013.jpg"><p>بەرگی پشتی مقلم</p></div>
     </div>
-</div>
+
+    <h2>بەرگی اسڵی</h2>
+    <div class="products">
+        <div class="product"><img src="pasti-w-serin/1788182642114.jpg"><p>بەرگی اسڵی</p></div>
+        <div class="product"><img src="pasti-w-serin/1788182694876.jpg"><p>بەرگی اسڵی</p></div>
+        <div class="product"><img src="pasti-w-serin/1788182700791.jpg"><p>بەرگی اسڵی</p></div>
+        <div class="product"><img src="pasti-w-serin/1788182707464.jpg"><p>بەرگی اسڵی</p></div>
+        <div class="product"><img src="pasti-w-serin/1788182934506.jpg"><p>بەرگی اسڵی</p></div>
+    </div>
+
+    <h2>بەرگی گوڵینکە</h2>
+    <div class="products">
+        <div class="product"><img src="pasti-w-serin/IMG-20260916-WA0003(1).jpg"><p>بەرگی گوڵینکە</p></div>
+        <div class="product"><img src="pasti-w-serin/file_0000000004ac82109c2a87a9be5a68ef.png"><p>بەرگی گوڵینکە</p></div>
+        <div class="product"><img src="pasti-w-serin/file_000000003e5081f68b6dc65d3d13c250.png"><p>بەرگی گوڵینکە</p></div>
+        <div class="product"><img src="pasti-w-serin/file_00000000bc7081f493f915de6844abdd.png"><p>بەرگی گوڵینکە</p></div>
+        <div class="product"><img src="pasti-w-serin/file_00000000bef88243b7768c1b9c34b582.png"><p>بەرگی گوڵینکە</p></div>
+        <div class="product"><img src="pasti-w-serin/file_00000000e2f48246a17b94f3f4ef14ee.png"><p>بەرگی گوڵینکە</p></div>
+        <div class="product"><img src="pasti-w-serin/file_00000000529081f5bd88c619ddbceb2d.png"><p>بەرگی گوڵینکە</p></div>
+    </div>
+
+    <h2>بەرگی سەرینی فەروو</h2>
+    <div class="products">
+        <div class="product"><img src="pasti-w-serin/IMG-20260917-WA0014.jpg"><p>بەرگی سەرینی فەروو</p></div>
+        <div class="product"><img src="pasti-w-serin/IMG-20260917-WA0015.jpg"><p>بەرگی سەرینی فەروو</p></div>
+        <div class="product"><img src="pasti-w-serin/IMG-20260917-WA0016.jpg"><p>بەرگی سەرینی فەروو</p></div>
+        <div class="product"><img src="pasti-w-serin/IMG-20260917-WA0018.jpg"><p>بەرگی سەرینی فەروو</p></div>
+        <div class="product"><img src="pasti-w-serin/IMG-20260917-WA0019.jpg"><p>بەرگی سەرینی فەروو</p></div>
+        <div class="product"><img src="pasti-w-serin/IMG-20260917-WA0021.jpg"><p>بەرگی سەرینی فەروو</p></div>
+    </div>
+
+    <div class="back">
+        <a href="index.html">گەڕانەوە بۆ سەرەکی</a>
+    </div>
+</section>
 
 <footer>
     © کۆمپانیای ئاسیان الزەهەبی - سەرجەم مافەکان پارێزراون
