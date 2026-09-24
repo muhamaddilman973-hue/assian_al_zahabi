@@ -22,18 +22,19 @@ body {
     line-height: 1.8;
 }
 
+/* باڕی سەرەوە بە ڕەنگی سەوزی کاڵ و شیک */
 header {
-    background: rgba(255, 255, 255, 0.95);
+    background: #e8f5e9;
     backdrop-filter: blur(10px);
     padding: 15px 40px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid #e2e8f0;
+    border-bottom: 2px solid #c8e6c9;
     position: sticky;
     top: 0;
     z-index: 1000;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.03);
 }
 
 .logo-area {
@@ -47,7 +48,7 @@ header img {
     height: 60px;
     object-fit: contain;
     border-radius: 50%;
-    border: 3px solid #8b5cf6;
+    border: 3px solid #2e7d32;
     background: white;
     transition: transform 0.5s ease;
 }
@@ -58,12 +59,12 @@ header img:hover {
 
 .company-titles h1 {
     font-size: 18px;
-    color: #0f172a;
+    color: #1b5e20;
     margin: 0;
 }
 
 .company-titles small {
-    color: #64748b;
+    color: #388e3c;
     font-size: 12px;
 }
 
@@ -73,7 +74,7 @@ nav {
 }
 
 nav a {
-    color: #64748b;
+    color: #2e7d32;
     text-decoration: none;
     font-weight: 600;
     font-size: 15px;
@@ -81,7 +82,7 @@ nav a {
 }
 
 nav a:hover {
-    color: #8b5cf6;
+    color: #1b5e20;
 }
 
 section {
@@ -90,57 +91,44 @@ section {
     padding: 40px 20px;
 }
 
-/* دیزاینی نوێ و شاهانەی بەشی Hero Section (بانەری سەرەکی) */
+/* دیزاینی نوێی بەشی Hero Section بە باگراوەندی نەرم و جووڵەی ئەنیمەیشن */
 .hero {
     text-align: center;
-    padding: 70px 30px;
-    background: radial-gradient(circle at center, #1e293b 0%, #090d16 100%);
-    color: #ffffff;
-    border-radius: 24px;
+    padding: 50px 20px;
+    background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%);
+    color: #0f172a;
+    border-radius: 20px;
     margin: 30px auto;
     max-width: 1100px;
-    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.35);
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05);
     position: relative;
     overflow: hidden;
-    border: 1px solid rgba(212, 175, 55, 0.3);
+    border: 1px solid #cbd5e1;
 }
 
-/* هێڵی ڕووناکی جوان لە دەورووبەری بانەرەکە */
-.hero::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 3px;
-    background: linear-gradient(90deg, transparent, #d4af37, transparent);
+/* کانتێنەری جووڵەی ئەنیمەیشن (لە ڕاستەوە بۆ چەپ) */
+.marquee-container {
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    box-sizing: border-box;
 }
 
-.hero h1 {
-    font-size: 38px;
-    font-weight: 800;
-    background: linear-gradient(135deg, #ffffff 30%, #e2e8f0 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    margin-bottom: 15px;
-    letter-spacing: 0.5px;
+.marquee-text {
+    display: inline-block;
+    padding-left: 100%;
+    animation: marquee 18s linear infinite;
+    font-size: 24px;
+    font-weight: bold;
+    color: #1e293b;
 }
 
-.hero .hero-subtitle {
-    font-size: 20px;
-    font-weight: 600;
-    background: linear-gradient(90deg, #d4af37, #f3e7c4, #d4af37);
-    background-size: 200% auto;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    animation: goldShine 4s linear infinite;
-    margin: 0;
-    letter-spacing: 0.5px;
-}
-
-@keyframes goldShine {
-    to {
-        background-position: 200% center;
+@keyframes marquee {
+    0% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(-100%, 0);
     }
 }
 
@@ -157,9 +145,10 @@ section {
 .about-section h2 {
     margin-top: 0;
     font-size: 24px;
-    border-bottom: 2px solid #8b5cf6;
+    border-bottom: 2px solid #2e7d32;
     padding-bottom: 10px;
     display: inline-block;
+    color: #1b5e20;
 }
 
 .about-section p {
@@ -270,7 +259,7 @@ section {
 }
 
 .category a:hover {
-    background: #8b5cf6;
+    background: #2e7d32;
     color: white;
 }
 
@@ -291,7 +280,7 @@ section {
 }
 
 .contact a {
-    color: #7c3aed;
+    color: #2e7d32;
     text-decoration: none;
     font-weight: bold;
 }
@@ -317,14 +306,8 @@ footer {
     .slide img {
         height: 400px;
     }
-    .hero {
-        padding: 45px 20px;
-    }
-    .hero h1 {
-        font-size: 26px;
-    }
-    .hero .hero-subtitle {
-        font-size: 16px;
+    .marquee-text {
+        font-size: 18px;
     }
 }
 </style>
@@ -349,10 +332,11 @@ footer {
     </div>
 </header>
 
-<!-- بەشی سەرەتا (Hero Section) بە دیزاینێکی تاریق و زێڕینی شاهانە -->
+<!-- بەشی سەرەتا (Hero Section) بە ئەنیمەیشنی جووڵەی ڕستەکە -->
 <section class="hero" id="home">
-    <h1>کۆمپانیای ئاسیان الزەهەبی</h1>
-    <p class="hero-subtitle">بۆ بازرگانی قوماش و پێداویستیەکانی ناوماڵ</p>
+    <div class="marquee-container">
+        <div class="marquee-text">کۆمپانیای ئاسیان الزەهەبی - بۆ بازرگانی قوماش و پێداویستیەکانی ناوماڵ</div>
+    </div>
 </section>
 
 <!-- بەشی دەربارەی ئێمە -->
@@ -405,7 +389,7 @@ footer {
 </div>
 
 <section id="products">
-<h2 style="text-align: center; margin-bottom: 30px;">بەشەکانی بەرهەمەکانمان</h2>
+<h2 style="text-align: center; margin-bottom: 30px; color: #1b5e20;">بەشەکانی بەرهەمەکانمان</h2>
 
 <div class="products-grid">
     <div class="category">
