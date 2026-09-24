@@ -91,7 +91,7 @@ section {
     padding: 40px 20px;
 }
 
-/* دیزاینی نوێی بەشی Hero Section بە ئەنیمەیشنی داکەوتن لە سەرەوە بۆ خوارەوە */
+/* بەشی Hero Section بە ئەنیمەیشنی ڕوونی داکەوتن لە سەرەوە بۆ خوارەوە */
 .hero {
     text-align: center;
     padding: 60px 20px;
@@ -110,17 +110,20 @@ section {
     font-weight: bold;
     color: #1e293b;
     margin-bottom: 15px;
-    animation: dropDown 1s ease-out;
+    opacity: 0;
+    transform: translateY(-50px);
+    animation: dropDownAnim 1s ease forwards;
 }
 
 .hero-subtitle {
     font-size: 20px;
     color: #475569;
     margin-bottom: 25px;
-    animation: dropDown 1.3s ease-out;
+    opacity: 0;
+    transform: translateY(-50px);
+    animation: dropDownAnim 1s ease 0.3s forwards;
 }
 
-/* دروشمە نوێیەکە بە ئەنیمەیشنی داکەوتن لە سەرەوە بۆ خوارەوە */
 .hero-features {
     display: flex;
     justify-content: center;
@@ -128,7 +131,9 @@ section {
     font-size: 18px;
     font-weight: bold;
     color: #2e7d32;
-    animation: dropDown 1.6s ease-out;
+    opacity: 0;
+    transform: translateY(-50px);
+    animation: dropDownAnim 1s ease 0.6s forwards;
 }
 
 .hero-features span {
@@ -139,10 +144,10 @@ section {
     border: 1px solid #c8e6c9;
 }
 
-@keyframes dropDown {
+@keyframes dropDownAnim {
     0% {
         opacity: 0;
-        transform: translateY(-40px);
+        transform: translateY(-50px);
     }
     100% {
         opacity: 1;
@@ -358,7 +363,7 @@ footer {
     </div>
 </header>
 
-<!-- بەشی سەرەتا (Hero Section) بە ئەنیمەیشنی داکەوتن لە سەرەوە بۆ خوارەوە -->
+<!-- بەشی سەرەتا (Hero Section) بە ئەنیمەیشنی ڕوونی داکەوتن لە سەرەوە بۆ خوارەوە -->
 <section class="hero" id="home">
     <div class="hero-title">کۆمپانیای ئاسیان الزەهەبی</div>
     <div class="hero-subtitle">بۆ بازرگانی قوماش و پێداویستیەکانی ناوماڵ</div>
