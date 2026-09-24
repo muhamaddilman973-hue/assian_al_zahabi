@@ -92,12 +92,52 @@ section {
 
 .hero {
     text-align: center;
-    padding: 50px 20px;
+    padding: 40px 20px;
     background: #ffffff;
     border-radius: 16px;
     margin-bottom: 30px;
     border: 1px solid #e2e8f0;
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+/* ئەنیمەیشنی سەرنجڕاکێش و بریقەدار بۆ ڕستەی داواکراو */
+.animated-banner {
+    text-align: center;
+    padding: 25px 20px;
+    background: linear-gradient(135deg, #111111, #1e1e1e);
+    border-radius: 14px;
+    margin: 0 0 30px 0;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    border: 1px solid #d4af37;
+    overflow: hidden;
+}
+
+.glowing-text {
+    font-size: 20px;
+    font-weight: bold;
+    background: linear-gradient(90deg, #fff, #d4af37, #fff, #d4af37);
+    background-size: 300% auto;
+    color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shine 5s linear infinite, floatText 3s ease-in-out infinite alternate;
+    margin: 0;
+    letter-spacing: 0.5px;
+}
+
+@keyframes shine {
+    to {
+        background-position: 300% center;
+    }
+}
+
+@keyframes floatText {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-3px);
+    }
 }
 
 /* بەشی دەربارەی ئێمە */
@@ -273,6 +313,9 @@ footer {
     .slide img {
         height: 400px;
     }
+    .glowing-text {
+        font-size: 16px;
+    }
 }
 </style>
 </head>
@@ -297,8 +340,12 @@ footer {
 </header>
 
 <section class="hero" id="home">
-<h1>کۆمپانیای ئاسیان الزەهەبی</h1>
-<p>بازرگانی و دروستکردنی پێداویستیەکانی ناوماڵ</p>
+    <h1>کۆمپانیای ئاسیان الزەهەبی</h1>
+    
+    <!-- بەشی ئەنیمەیشنی ڕستەی داواکراو -->
+    <div class="animated-banner">
+        <p class="glowing-text">کۆمپانیای ئسیان الزەهەبی بازرگانی و دروستکردنی پێداویستیەکانی ناوماڵ</p>
+    </div>
 </section>
 
 <!-- بەشی دەربارەی ئێمە -->
@@ -385,7 +432,6 @@ footer {
     </div>
 
     <div class="category">
-        <!-- لێرە وێنەی بەرگی کوردی ئەسڵی لە کارتەکەدا دانرا -->
         <img src="pasti-w-serin/WhatsApp Image 2026-09-23 at 16.12.50.jpeg" alt="بەرگی کوردی ئەسڵی">
         <h2>بەرگی پشتی و سەرین (کوردی ئەسڵی)</h2>
         <p>بینینی بەرهەمەکانی بەرگی پشتی و سەرین و کوردی ئەسڵی</p>
