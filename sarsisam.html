@@ -5,134 +5,119 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>سەرسیسەم و سێتی فەروو - کۆمپانیای ئاسیان الزەهەبی</title>
+
 <style>
-body {
-    font-family: Arial, Tahoma, sans-serif;
-    background: #0b291a; /* سەوزی تۆخ بۆ باگراوەندی گشتی */
-    color: white;
-    margin: 0;
-    line-height: 1.8;
+body{
+font-family:Arial,Tahoma,sans-serif;
+background:#111;
+color:white;
+margin:0;
+line-height:1.8;
 }
 
-header {
-    background: #06180f; /* سەوزی زۆر تۆخ بۆ سەرەوە */
-    padding: 20px;
-    text-align: center;
-    border-bottom: 2px solid #6b21a8; /* مۆری تۆخ */
+header{
+background:#000;
+padding:20px;
+text-align:center;
+border-bottom:2px solid #d4af37;
 }
 
-header img {
-    width: 80px;
-    height: 80px;
-    object-fit: contain;
-    border-radius: 50%;
-    border: 2px solid #6b21a8;
-    background: white;
+header img{
+width:75px;
+height:75px;
+object-fit:contain;
+border-radius:50%;
+border:2px solid #d4af37;
+background:white;
 }
 
-h1, h2 {
-    color: #e9d5ff; /* مۆری کاڵ بۆ سەرنووسەکان */
+h1,h2{
+color:#d4af37;
 }
 
-nav {
-    margin-top: 15px;
+nav{
+margin-top:15px;
 }
 
-nav a {
-    color: #e2e8f0;
-    text-decoration: none;
-    margin: 0 10px;
-    font-weight: bold;
+nav a{
+color:white;
+text-decoration:none;
+margin:0 8px;
 }
 
-nav a:hover {
-    color: #c084fc;
+section{
+max-width:1100px;
+margin:auto;
+padding:45px 20px;
 }
 
-section {
-    max-width: 1100px;
-    margin: auto;
-    padding: 40px 20px;
+.products{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+gap:20px;
 }
 
-.products {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 25px;
-    margin-top: 20px;
-    margin-bottom: 40px;
+.product{
+background:#1c1c1c;
+border:1px solid #444;
+border-radius:15px;
+overflow:hidden;
+text-align:center;
+padding-bottom: 15px;
 }
 
-.product {
-    background: #103724; /* سەوزی تۆخ بۆ قاڵبی بەرهەمەکان */
-    border: 1px solid #1e4632;
-    border-radius: 12px;
-    overflow: hidden;
-    text-align: center;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+.product img{
+width:100%;
+height:250px;
+object-fit:cover;
 }
 
-.product img {
-    width: 100%;
-    height: auto; /* وێنەکان بە تەواوی و بێ بڕانەوە دەردەکەون */
-    display: block;
-    background: #000;
+.product p{
+color:#ddd;
+padding:10px;
+margin: 0;
 }
 
-.product p {
-    color: #f1f5f9;
-    padding: 12px;
-    margin: 0;
-    font-size: 15px;
-}
-
-.back-btn {
-    text-align: center;
-    margin: 30px 0;
-}
-
-.back-btn a {
+/* دوگمەی داواکردن لە واتسئاپ بۆ هەر بەرهەمێک */
+.whatsapp-order-btn {
     display: inline-block;
-    background: #6b21a8; /* دوگمە بە مۆری تۆخ */
+    background: #25d366;
     color: white;
     text-decoration: none;
-    padding: 12px 25px;
+    padding: 8px 16px;
     border-radius: 8px;
     font-weight: bold;
+    font-size: 14px;
+    margin-top: 10px;
     transition: 0.3s;
 }
 
-.back-btn a:hover {
-    background: #581c87;
+.whatsapp-order-btn:hover {
+    background: #128c7e;
 }
 
-.contact {
-    text-align: center;
-    background: #103724;
-    border-radius: 15px;
-    padding: 30px;
-    margin-top: 40px;
-    border: 1px solid #1e4632;
+.back{
+    text-align:center;
+    margin-top:35px;
 }
 
-.contact p {
-    font-size: 16px;
-    margin: 10px 0;
+.back a{
+    display:inline-block;
+    background:#d4af37;
+    color:#111;
+    text-decoration:none;
+    padding:12px 25px;
+    border-radius:10px;
+    font-weight:bold;
 }
 
-.contact a {
-    color: #d8b4fe;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-footer {
-    background: #06180f;
-    text-align: center;
-    padding: 25px;
-    color: #94a3b8;
-    border-top: 2px solid #6b21a8;
-    margin-top: 40px;
+footer{
+background:#000;
+text-align:center;
+padding:25px;
+color:#aaa;
+border-top:2px solid #d4af37;
+margin-top:40px;
 }
 </style>
 </head>
@@ -140,91 +125,90 @@ footer {
 <body>
 
 <header>
-<img src="images/IMG-20260914-WA0016.jpg" alt="لۆگۆ">
+<img src="IMG-20260914-WA0016.jpg" alt="لۆگۆ">
 <h1>کۆمپانیای ئاسیان الزەهەبی</h1>
-<small style="color: #94a3b8;">بەشی سەرسیسەم و سێتی فەروو</small>
+<small>ASSIAN AL-ZAHABI COMPANY</small>
 <nav>
-<a href="index.html">سەرەتا</a>
-<a href="index.html#contact">پەیوەندی</a>
+<a href="index.html">سەرەکی</a>
 </nav>
 </header>
 
 <section>
-<h2 style="text-align: center; margin-bottom: 30px;">سەرسیسەم و سێتی فەروو</h2>
 
+<h2>سەرسیسەم و سێتی فەروو (١١ وێنە)</h2>
 <div class="products">
-
-<!-- سەرسیسەمی ٤ وەرزە -->
-<div class="product">
-<img src="sarsisam/aaa.jpeg" alt="سەرسیسەم">
-<p>سەرسیسەمی ٤ وەرزە<br>٦ پارچە – ٢ نەفەری<br>٤ پارچە – ١ نەفەری</p>
+    <!-- وێنەی ١ -->
+    <div class="product">
+        <img src="sarsisam/1.jpg" alt="سەرسیسەم">
+        <p>سەرسیسەم و سێتی فەروو</p>
+        <a class="whatsapp-order-btn" href="https://wa.me/9647721720505?text=سڵاو،%20دەمەوێت%20مۆدێلی%20(سەرسیسەم% و%20سێتی%20فەروو)%20داوا%20بکەم." target="_blank">📲 داواکردن لە واتسئاپ</a>
+    </div>
+    <!-- وێنەی ٢ -->
+    <div class="product">
+        <img src="sarsisam/2.jpg" alt="سەرسیسەم">
+        <p>سەرسیسەم و سێتی فەروو</p>
+        <a class="whatsapp-order-btn" href="https://wa.me/9647721720505?text=سڵاو،%20دەمەوێت%20مۆدێلی%20(سەرسیسەم% و%20سێتی%20فەروو)%20داوا%20بکەم." target="_blank">📲 داواکردن لە واتسئاپ</a>
+    </div>
+    <!-- وێنەی ٣ -->
+    <div class="product">
+        <img src="sarsisam/3.jpg" alt="سەرسیسەم">
+        <p>سەرسیسەم و سێتی فەروو</p>
+        <a class="whatsapp-order-btn" href="https://wa.me/9647721720505?text=سڵاو،%20دەمەوێت%20مۆدێلی%20(سەرسیسەم% و%20سێتی%20فەروو)%20داوا%20بکەم." target="_blank">📲 داواکردن لە واتسئاپ</a>
+    </div>
+    <!-- وێنەی ٤ -->
+    <div class="product">
+        <img src="sarsisam/4.jpg" alt="سەرسیسەم">
+        <p>سەرسیسەم و سێتی فەروو</p>
+        <a class="whatsapp-order-btn" href="https://wa.me/9647721720505?text=سڵاو،%20دەمەوێت%20مۆدێلی%20(سەرسیسەم% و%20سێتی%20فەروو)%20داوا%20بکەم." target="_blank">📲 داواکردن لە واتسئاپ</a>
+    </div>
+    <!-- وێنەی ٥ -->
+    <div class="product">
+        <img src="sarsisam/5.jpg" alt="سەرسیسەم">
+        <p>سەرسیسەم و سێتی فەروو</p>
+        <a class="whatsapp-order-btn" href="https://wa.me/9647721720505?text=سڵاو،%20دەمەوێت%20مۆدێلی%20(سەرسیسەم% و%20سێتی%20فەروو)%20داوا%20بکەم." target="_blank">📲 داواکردن لە واتسئاپ</a>
+    </div>
+    <!-- وێنەی ٦ -->
+    <div class="product">
+        <img src="sarsisam/6.jpg" alt="سەرسیسەم">
+        <p>سەرسیسەم و سێتی فەروو</p>
+        <a class="whatsapp-order-btn" href="https://wa.me/9647721720505?text=سڵاو،%20دەمەوێت%20مۆدێلی%20(سەرسیسەم% و%20سێتی%20فەروو)%20داوا%20بکەم." target="_blank">📲 داواکردن لە واتسئاپ</a>
+    </div>
+    <!-- وێنەی ٧ -->
+    <div class="product">
+        <img src="sarsisam/7.jpg" alt="سەرسیسەم">
+        <p>سەرسیسەم و سێتی فەروو</p>
+        <a class="whatsapp-order-btn" href="https://wa.me/9647721720505?text=سڵاو،%20دەمەوێت%20مۆدێلی%20(سەرسیسەم% و%20سێتی%20فەروو)%20داوا%20بکەم." target="_blank">📲 داواکردن لە واتسئاپ</a>
+    </div>
+    <!-- وێنەی ٨ -->
+    <div class="product">
+        <img src="sarsisam/8.jpg" alt="سەرسیسەم">
+        <p>سەرسیسەم و سێتی فەروو</p>
+        <a class="whatsapp-order-btn" href="https://wa.me/9647721720505?text=سڵاو،%20دەمەوێت%20مۆدێلی%20(سەرسیسەم% و%20سێتی%20فەروو)%20داوا%20بکەم." target="_blank">📲 داواکردن لە واتسئاپ</a>
+    </div>
+    <!-- وێنەی ٩ -->
+    <div class="product">
+        <img src="sarsisam/9.jpg" alt="سەرسیسەم">
+        <p>سەرسیسەم و سێتی فەروو</p>
+        <a class="whatsapp-order-btn" href="https://wa.me/9647721720505?text=سڵاو،%20دەمەوێت%20مۆدێلی%20(سەرسیسەم% و%20سێتی%20فەروو)%20داوا%20بکەم." target="_blank">📲 داواکردن لە واتسئاپ</a>
+    </div>
+    <!-- وێنەی ١٠ -->
+    <div class="product">
+        <img src="sarsisam/10.jpg" alt="سەرسیسەم">
+        <p>سەرسیسەم و سێتی فەروو</p>
+        <a class="whatsapp-order-btn" href="url?id=11?text=سڵاو،%20دەمەوێت%20مۆدێلی%20(سەرسیسەم% و%20سێتی%20فەروو)%20داوا%20بکەم." target="_blank">📲 داواکردن لە واتسئاپ</a>
+    </div>
+    <!-- وێنەی ١١ -->
+    <div class="product">
+        <img src="sarsisam/11.jpg" alt="سەرسیسەم">
+        <p>سەرسیسەم و سێتی فەروو</p>
+        <a class="whatsapp-order-btn" href="https://wa.me/9647721720505?text=سڵاو،%20دەمەوێت%20مۆدێلی%20(سەرسیسەم% و%20سێتی%20فەروو)%20داوا%20بکەم." target="_blank">📲 داواکردن لە واتسئاپ</a>
+    </div>
 </div>
 
-<div class="product">
-<img src="sarsisam/aaa (2).jpeg" alt="سەرسیسەم">
-<p>سەرسیسەمی ٤ وەرزە<br>٦ پارچە – ٢ نەفەری<br>٤ پارچە – ١ نەفەری</p>
+<div class="back">
+<a href="index.html">گەڕانەوە بۆ سەرەکی</a>
 </div>
 
-<div class="product">
-<img src="sarsisam/aaa (3).jpeg" alt="سەرسیسەم">
-<p>سەرسیسەمی ٤ وەرزە<br>٦ پارچە – ٢ نەفەری<br>٤ پارچە – ١ نەفەری</p>
-</div>
-
-<div class="product">
-<img src="sarsisam/aaa (4).jpeg" alt="سەرسیسەم">
-<p>سەرسیسەمی ٤ وەرزە<br>٦ پارچە – ٢ نەفەری<br>٤ پارچە – ١ نەفەری</p>
-</div>
-
-<div class="product">
-<img src="sarsisam/aaa (5).jpeg" alt="سەرسیسەم">
-<p>سەرسیسەمی ٤ وەرزە<br>٦ پارچە – ٢ نەفەری<br>٤ پارچە – ١ نەفەری</p>
-</div>
-
-<!-- سێتی فەروو ٦ پارچە ئەسڵی -->
-<div class="product">
-<img src="sarsisam/سێتی فەروو1.webp" alt="سێتی فەروو">
-<p>سێتی فەروو ٦ پارچە ئەسڵی</p>
-</div>
-
-<div class="product">
-<img src="sarsisam/سێتی فەروو2.webp" alt="سێتی فەروو">
-<p>سێتی فەروو ٦ پارچە ئەسڵی</p>
-</div>
-
-<div class="product">
-<img src="sarsisam/سێتی فەروو3.webp" alt="سێتی فەروو">
-<p>سێتی فەروو ٦ پارچە ئەسڵی</p>
-</div>
-
-<div class="product">
-<img src="sarsisam/سێتی فاروو4.jfif" alt="سێتی فەروو">
-<p>سێتی فەروو ٦ پارچە ئەسڵی</p>
-</div>
-
-<div class="product">
-<img src="sarsisam/سێتی فەروو5.jfif" alt="سێتی فەروو">
-<p>سێتی فەروو ٦ پارچە ئەسڵی</p>
-</div>
-
-<div class="product">
-<img src="sarsisam/سێتی فەروو 6.jfif" alt="سێتی فەروو">
-<p>سێتی فەروو ٦ پارچە ئەسڵی</p>
-</div>
-
-</div>
-
-<div class="back-btn">
-<a href="index.html">گەڕانەوە بۆ پەڕەی سەرەکی</a>
-</div>
-
-</section>
-
-<section class="contact">
-<h2>پەیوەندی بە ئێمە</h2>
-<p>📍 سلێمانی - مەخزەنەکانی ژاڵەی خواروو - بازاڕی نەوزاد - کۆگای ژمارە ٢٦</p>
-<p>📞 فەرمان: <a href="tel:07701486096">07701486096</a></p>
-<p>📞 دیلمان: <a href="tel:07721720505">07721720505</a></p>
-<p>📱 واتسئاپ: <a href="https://wa.me/9647721720505">07721720505</a></p>
 </section>
 
 <footer>
