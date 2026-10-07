@@ -206,6 +206,12 @@ section {
     object-fit: contain;
     display: block;
     background: #f1f5f9;
+    cursor: pointer; /* نیشاندانی هێمای کلیک کردن سەر وێنەکان */
+    transition: transform 0.3s;
+}
+
+.slide img:hover {
+    transform: scale(1.01);
 }
 
 .slide-caption {
@@ -230,6 +236,53 @@ section {
 @keyframes fade {
     from {opacity: 0.4;}
     to {opacity: 1;}
+}
+
+/* دیزاینی پەنجەرەی گەورەکردنی وێنە (Lightbox Modal) */
+#imageModal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    padding-top: 50px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+#modalImg {
+    margin: auto;
+    display: block;
+    max-width: 90%;
+    max-height: 85vh;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(255,255,255,0.2);
+}
+
+#modalCaption {
+    margin: 15px auto;
+    text-align: center;
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: bold;
+    width: 80%;
+}
+
+.close-modal {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    color: #f1f1f1;
+    font-size: 45px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.close-modal:hover {
+    color: #2e7d32;
 }
 
 /* ڕێکخستنی بەشەکان بە شێوازی گریدی مۆدێرن */
@@ -387,40 +440,47 @@ footer {
 
     <!-- ١. دووکان -->
     <div class="slide fade">
-        <img src="دوووكان.jpeg" alt="دووکان">
+        <img src="دوووكان.jpeg" alt="دووکان" onclick="openModal(this)">
         <p class="slide-caption">پێشانگا و فرۆشگای سەرەکی کۆمپانیا</p>
     </div>
 
     <!-- ٢. کارگە -->
     <div class="slide fade">
-        <img src="معمل 1.jpeg" alt="کارگە">
+        <img src="معمل 1.jpeg" alt="کارگە" onclick="openModal(this)">
         <p class="slide-caption">بەشی ئامێرە مۆدێرنەکان لە کارگەدا</p>
     </div>
 
     <!-- ٣. سڵایدی سەرەتا (1788184695688.jpg) -->
     <div class="slide fade">
-        <img src="1788184695688.jpg" alt="بەرهەم">
+        <img src="1788184695688.jpg" alt="بەرهەم" onclick="openModal(this)">
         <p class="slide-caption">نموونەی بەرهەمی نوێ</p>
     </div>
 
     <!-- ٤. بەرگی گۆشە -->
     <div class="slide fade">
-        <img src="berg_gosha/1788334502858.jpg" alt="بەرگی گۆشە">
+        <img src="berg_gosha/1788334502858.jpg" alt="بەرگی گۆشە" onclick="openModal(this)">
         <p class="slide-caption">بەرگی گۆشەی مۆدێرن</p>
     </div>
 
     <!-- ٥. فەرش -->
     <div class="slide fade">
-        <img src="farsh w sarfarsh/فەرش.jpeg" alt="فەرش">
+        <img src="farsh w sarfarsh/فەرش.jpeg" alt="فەرش" onclick="openModal(this)">
         <p class="slide-caption">فەرشی کوالێتی بەرز</p>
     </div>
 
     <!-- ٦. پشتی و سەرین (کوردی ئەسڵی) -->
     <div class="slide fade">
-        <img src="pasti-w-serin/WhatsApp Image 2026-09-23 at 16.12.50.jpeg" alt="بەرگی کوردی ئەسڵی">
+        <img src="pasti-w-serin/WhatsApp Image 2026-09-23 at 16.12.50.jpeg" alt="بەرگی کوردی ئەسڵی" onclick="openModal(this)">
         <p class="slide-caption">بەرگی کوردی ئەسڵی</p>
     </div>
 
+</div>
+
+<!-- پەنجەرەی گەورەکردنی وێنە (Lightbox Modal) -->
+<div id="imageModal" onclick="closeModal()">
+    <span class="close-modal">&times;</span>
+    <img id="modalImg">
+    <div id="modalCaption"></div>
 </div>
 
 <section id="products">
@@ -480,7 +540,7 @@ footer {
 © کۆمپانیای ئاسیان الزەهەبی - سەرجەم مافەکان پارێزراون
 </footer>
 
-<!-- سکریپتی سڵایدشۆوی خۆکار -->
+<!-- سکریپتی سڵایدشۆوی خۆکار و گەورەکردنی وێنەکان -->
 <script>
 let slideIndex = 0;
 showSlides();
@@ -495,6 +555,27 @@ function showSlides() {
   if (slideIndex > slides.length) {slideIndex = 1}    
   slides[slideIndex-1].style.display = "block";  
   setTimeout(showSlides, 4000);
+}
+
+// فەنکشنی کردنەوەی وێنە بە گەورەیی (Lightbox)
+function openModal(img) {
+    const modal = document.getElementById("imageModal");
+    const modalImg = document.getElementById("modalImg");
+    const captionText = document.getElementById("modalCaption");
+    
+    modal.style.display = "block";
+    modalImg.src = img.src;
+    
+    // وەرگرتنی دەقەکەی خوار وێنەکە (Caption)
+    const caption = img.parentElement.querySelector(".slide-caption");
+    if (caption) {
+        captionText.innerHTML = caption.innerHTML;
+    }
+}
+
+// داخستنی پەنجەرەی وێنە گەورەکە
+function closeModal() {
+    document.getElementById("imageModal").style.display = "none";
 }
 </script>
 
