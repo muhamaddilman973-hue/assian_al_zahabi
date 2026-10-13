@@ -67,13 +67,68 @@ section {
     height: auto; /* وێنەکان بە تەواوی و بێ بڕانەوە دەردەکەون */
     display: block;
     background: #000;
+    cursor: pointer; /* نیشاندانی هێمای کلیک کردن سەر وێنەکان */
+    transition: transform 0.3s;
 }
+
+.product img:hover {
+    transform: scale(1.03);
+}
+
 .product p {
     color: #f1f5f9;
     padding: 12px;
     margin: 0;
     font-size: 15px;
 }
+
+/* دیزاینی پەنجەرەی گەورەکردنی وێنە (Lightbox Modal) */
+#imageModal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    padding-top: 50px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+#modalImg {
+    margin: auto;
+    display: block;
+    max-width: 90%;
+    max-height: 85vh;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(255,255,255,0.2);
+}
+
+#modalCaption {
+    margin: 15px auto;
+    text-align: center;
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: bold;
+    width: 80%;
+}
+
+.close-modal {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    color: #f1f1f1;
+    font-size: 45px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.close-modal:hover {
+    color: #c084fc;
+}
+
 /* دوگمەی داواکردن لە واتسئاپ بۆ هەر بەرهەمێک */
 .whatsapp-order-btn {
     display: inline-block;
@@ -151,31 +206,31 @@ footer {
 
 <div class="products">
     <div class="product">
-        <img src="sarsisam/aaa.jpeg" alt="سەرسیسەم">
+        <img src="sarsisam/aaa.jpeg" alt="سەرسیسەم" onclick="openModal(this)">
         <p>سەرسیسەمی ٤ وەرزە<br>٦ پارچە – ٢ نەفەری<br>٤ پارچە – ١ نەفەری</p>
         <a class="whatsapp-order-btn" href="https://wa.me/9647721720505?text=سڵاو،%20دەمەوێت%20مۆدێلی%20(سەرسیسەمی%20٤%20وەرزە)%20داوا%20بکەم." target="_blank">📲 داواکردن لە واتسئاپ</a>
     </div>
 
     <div class="product">
-        <img src="sarsisam/aaa (2).jpeg" alt="سەرسیسەم">
+        <img src="sarsisam/aaa (2).jpeg" alt="سەرسیسەم" onclick="openModal(this)">
         <p>سەرسیسەمی ٤ وەرزە<br>٦ پارچە – ٢ نەفەری<br>٤ پارچە – ١ نەفەری</p>
         <a class="whatsapp-order-btn" href="https://wa.me/9647721720505?text=سڵاو،%20دەمەوێت%20مۆدێلی%20(سەرسیسەمی%20٤%20وەرزە)%20داوا%20بکەم." target="_blank">📲 داواکردن لە واتسئاپ</a>
     </div>
 
     <div class="product">
-        <img src="sarsisam/aaa (3).jpeg" alt="سەرسیسەم">
+        <img src="sarsisam/aaa (3).jpeg" alt="سەرسیسەم" onclick="openModal(this)">
         <p>سەرسیسەمی ٤ وەرزە<br>٦ پارچە – ٢ نەفەری<br>٤ پارچە – ١ نەفەری</p>
         <a class="whatsapp-order-btn" href="https://wa.me/9647721720505?text=سڵاو،%20دەمەوێت%20مۆدێلی%20(سەرسیسەمی%20٤%20وەرزە)%20داوا%20بکەم." target="_blank">📲 داواکردن لە واتسئاپ</a>
     </div>
 
     <div class="product">
-        <img src="sarsisam/aaa (4).jpeg" alt="سەرسیسەم">
+        <img src="sarsisam/aaa (4).jpeg" alt="سەرسیسەم" onclick="openModal(this)">
         <p>سەرسیسەمی ٤ وەرزە<br>٦ پارچە – ٢ نەفەری<br>٤ پارچە – ١ نەفەری</p>
         <a class="whatsapp-order-btn" href="https://wa.me/9647721720505?text=سڵاو،%20دەمەوێت%20مۆدێلی%20(سەرسیسەمی%20٤%20وەرزە)%20داوا%20بکەم." target="_blank">📲 داواکردن لە واتسئاپ</a>
     </div>
 
     <div class="product">
-        <img src="sarsisam/aaa (5).jpeg" alt="سەرسیسەم">
+        <img src="sarsisam/aaa (5).jpeg" alt="سەرسیسەم" onclick="openModal(this)">
         <p>سەرسیسەمی ٤ وەرزە<br>٦ پارچە – ٢ نەفەری<br>٤ پارچە – ١ نەفەری</p>
         <a class="whatsapp-order-btn" href="https://wa.me/9647721720505?text=سڵاو،%20دەمەوێت%20مۆدێلی%20(سەرسیسەمی%20٤%20وەرزە)%20داوا%20بکەم." target="_blank">📲 داواکردن لە واتسئاپ</a>
     </div>
@@ -185,37 +240,37 @@ footer {
 
 <div class="products">
     <div class="product">
-        <img src="sarsisam/سێتی فەروو1.webp" alt="سێتی فەروو">
+        <img src="sarsisam/سێتی فەروو1.webp" alt="سێتی فەروو" onclick="openModal(this)">
         <p>سێتی فەروو ٦ پارچە ئەسڵی</p>
         <a class="whatsapp-order-btn" href="https://wa.me/9647721720505?text=سڵاو،%20دەمەوێت%20مۆدێلی%20(سێتی%20فەروو)%20داوا%20بکەم." target="_blank">📲 داواکردن لە واتسئاپ</a>
     </div>
 
     <div class="product">
-        <img src="sarsisam/سێتی فەروو2.webp" alt="سێتی فەروو">
+        <img src="sarsisam/سێتی فەروو2.webp" alt="سێتی فەروو" onclick="openModal(this)">
         <p>سێتی فەروو ٦ پارچە ئەسڵی</p>
         <a class="whatsapp-order-btn" href="https://wa.me/9647721720505?text=سڵاو،%20دەمەوێت%20مۆدێلی%20(سێتی%20فەروو)%20داوا%20بکەم." target="_blank">📲 داواکردن لە واتسئاپ</a>
     </div>
 
     <div class="product">
-        <img src="sarsisam/سێتی فەروو3.webp" alt="سێتی فەروو">
+        <img src="sarsisam/سێتی فەروو3.webp" alt="سێتی فەروو" onclick="openModal(this)">
         <p>سێتی فەروو ٦ پارچە ئەسڵی</p>
         <a class="whatsapp-order-btn" href="https://wa.me/9647721720505?text=سڵاو،%20دەمەوێت%20مۆدێلی%20(سێتی%20فەروو)%20داوا%20بکەم." target="_blank">📲 داواکردن لە واتسئاپ</a>
     </div>
 
     <div class="product">
-        <img src="sarsisam/سێتی فاروو4.jfif" alt="سێتی فەروو">
+        <img src="sarsisam/سێتی فاروو4.jfif" alt="سێتی فەروو" onclick="openModal(this)">
         <p>سێتی فەروو ٦ پارچە ئەسڵی</p>
         <a class="whatsapp-order-btn" href="https://wa.me/9647721720505?text=سڵاو،%20دەمەوێت%20مۆدێلی%20(سێتی%20فەروو)%20داوا%20بکەم." target="_blank">📲 داواکردن لە واتسئاپ</a>
     </div>
 
     <div class="product">
-        <img src="sarsisam/سێتی فەروو5.jfif" alt="سێتی فەروو">
+        <img src="sarsisam/سێتی فەروو5.jfif" alt="سێتی فەروو" onclick="openModal(this)">
         <p>سێتی فەروو ٦ پارچە ئەسڵی</p>
         <a class="whatsapp-order-btn" href="https://wa.me/9647721720505?text=سڵاو،%20دەمەوێت%20مۆدێلی%20(سێتی%20فەروو)%20داوا%20بکەم." target="_blank">📲 داواکردن لە واتسئاپ</a>
     </div>
 
     <div class="product">
-        <img src="sarsisam/سێتی فەروو 6.jfif" alt="سێتی فەروو">
+        <img src="sarsisam/سێتی فەروو 6.jfif" alt="سێتی فەروو" onclick="openModal(this)">
         <p>سێتی فەروو ٦ پارچە ئەسڵی</p>
         <a class="whatsapp-order-btn" href="https://wa.me/9647721720505?text=سڵاو،%20دەمەوێت%20مۆدێلی%20(سێتی%20فەروو)%20داوا%20بکەم." target="_blank">📲 داواکردن لە واتسئاپ</a>
     </div>
@@ -238,6 +293,37 @@ footer {
 <footer>
 © کۆمپانیای ئاسیان الزەهەبی - سەرجەم مافەکان پارێزراون
 </footer>
+
+<!-- پەنجەرەی گەورەکردنی وێنە (Lightbox Modal) -->
+<div id="imageModal" onclick="closeModal()">
+    <span class="close-modal">&times;</span>
+    <img id="modalImg">
+    <div id="modalCaption"></div>
+</div>
+
+<!-- سکریپتی گەورەکردنی وێنەکان -->
+<script>
+function openModal(img) {
+    const modal = document.getElementById("imageModal");
+    const modalImg = document.getElementById("modalImg");
+    const captionText = document.getElementById("modalCaption");
+    
+    modal.style.display = "block";
+    modalImg.src = img.src;
+    
+    const productBox = img.closest('.product');
+    if (productBox) {
+        const caption = productBox.querySelector("p");
+        if (caption) {
+            captionText.innerHTML = caption.innerHTML;
+        }
+    }
+}
+
+function closeModal() {
+    document.getElementById("imageModal").style.display = "none";
+}
+</script>
 
 </body>
 </html>
