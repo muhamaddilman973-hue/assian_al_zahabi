@@ -70,12 +70,65 @@ padding-bottom: 15px;
 width:100%;
 height:250px;
 object-fit:cover;
+cursor: pointer; /* نیشاندانی هێمای کلیک کردن سەر وێنەکان */
+transition: transform 0.3s;
+}
+
+.product img:hover {
+    transform: scale(1.03);
 }
 
 .product p{
 color:#ddd;
 padding:10px;
 margin: 0;
+}
+
+/* دیزاینی پەنجەرەی گەورەکردنی وێنە (Lightbox Modal) */
+#imageModal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    padding-top: 50px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+#modalImg {
+    margin: auto;
+    display: block;
+    max-width: 90%;
+    max-height: 85vh;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(255,255,255,0.2);
+}
+
+#modalCaption {
+    margin: 15px auto;
+    text-align: center;
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: bold;
+    width: 80%;
+}
+
+.close-modal {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    color: #f1f1f1;
+    font-size: 45px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.close-modal:hover {
+    color: #d4af37;
 }
 
 /* دوگمەی داواکردن لە واتسئاپ لەگەڵ لینکی وێنە */
@@ -139,52 +192,52 @@ margin-top:40px;
 <h2>بەرگی پشتی مقلم</h2>
 <div class="products">
 <div class="product">
-    <img src="pasti-w-serin/IMG-20260917-WA0003.jpg">
+    <img src="pasti-w-serin/IMG-20260917-WA0003.jpg" onclick="openModal(this)">
     <p>بەرگی پشتی مقلم</p>
     <a class="whatsapp-order-btn" href="https://wa.me/9647721720505?text=سڵاو،%20دەمەوێت%20ئەم%20مۆدێلە%20داوا%20بکەم.%20لینک و وێنە: pasti-w-serin/IMG-20260917-WA0003.jpg" target="_blank">📲 داواکردن لە واتسئاپ</a>
 </div>
 <div class="product">
-    <img src="pasti-w-serin/IMG-20260917-WA0004.jpg">
+    <img src="pasti-w-serin/IMG-20260917-WA0004.jpg" onclick="openModal(this)">
     <p>بەرگی پشتی مقلم</p>
     <a class="whatsapp-order-btn" href="https://wa.me/9647721720505?text=سڵاو،%20دەمەوێت%20ئەم%20مۆدێلە%20داوا%20بکەم.%20لینک و وێنە: pasti-w-serin/IMG-20260917-WA0004.jpg" target="_blank">📲 داواکردن لە واتسئاپ</a>
 </div>
 <div class="product">
-    <img src="pasti-w-serin/IMG-20260917-WA0005.jpg">
+    <img src="pasti-w-serin/IMG-20260917-WA0005.jpg" onclick="openModal(this)">
     <p>بەرگی پشتی مقلم</p>
     <a class="whatsapp-order-btn" href="https://wa.me/9647721720505?text=سڵاو،%20دەمەوێت%20ئەم%20مۆدێلە%20داوا%20بکەم.%20لینک و وێنە: pasti-w-serin/IMG-20260917-WA0005.jpg" target="_blank">📲 داواکردن لە واتسئاپ</a>
 </div>
 <div class="product">
-    <img src="pasti-w-serin/IMG-20260917-WA0006.jpg">
+    <img src="pasti-w-serin/IMG-20260917-WA0006.jpg" onclick="openModal(this)">
     <p>بەرگی پشتی مقلم</p>
     <a class="whatsapp-order-btn" href="https://wa.me/9647721720505?text=سڵاو،%20دەمەوێت%20ئەم%20مۆدێلە%20داوا%20بکەم.%20لینک و وێنە: pasti-w-serin/IMG-20260917-WA0006.jpg" target="_blank">📲 داواکردن لە واتسئاپ</a>
 </div>
 <div class="product">
-    <img src="pasti-w-serin/IMG-20260917-WA0007.jpg">
+    <img src="pasti-w-serin/IMG-20260917-WA0007.jpg" onclick="openModal(this)">
     <p>بەرگی پشتی مقلم</p>
     <a class="whatsapp-order-btn" href="https://wa.me/9647721720505?text=سڵاو،%20دەمەوێت%20ئەم%20مۆدێلە%20داوا%20بکەم.%20لینک و وێنە: pasti-w-serin/IMG-20260917-WA0007.jpg" target="_blank">📲 داواکردن لە واتسئاپ</a>
 </div>
 <div class="product">
-    <img src="pasti-w-serin/IMG-20260917-WA0008.jpg">
+    <img src="pasti-w-serin/IMG-20260917-WA0008.jpg" onclick="openModal(this)">
     <p>بەرگی پشتی مقلم</p>
     <a class="whatsapp-order-btn" href="https://wa.me/9647721720505?text=سڵاو،%20دەمەوێت%20ئەم%20مۆدێلە%20داوا%20بکەم.%20لینک و وێنە: pasti-w-serin/IMG-20260917-WA0008.jpg" target="_blank">📲 داواکردن لە واتسئاپ</a>
 </div>
 <div class="product">
-    <img src="pasti-w-serin/IMG-20260917-WA0010.jpg">
+    <img src="pasti-w-serin/IMG-20260917-WA0010.jpg" onclick="openModal(this)">
     <p>بەرگی پشتی مقلم</p>
     <a class="whatsapp-order-btn" href="https://wa.me/9647721720505?text=سڵاو،%20دەمەوێت%20ئەم%20مۆدێلە%20داوا%20بکەم.%20لینک و وێنە: pasti-w-serin/IMG-20260917-WA0010.jpg" target="_blank">📲 داواکردن لە واتسئاپ</a>
 </div>
 <div class="product">
-    <img src="pasti-w-serin/IMG-20260917-WA0011.jpg">
+    <img src="pasti-w-serin/IMG-20260917-WA0011.jpg" onclick="openModal(this)">
     <p>بەرگی پشتی مقلم</p>
     <a class="whatsapp-order-btn" href="https://wa.me/9647721720505?text=سڵاو،%20دەمەوێت%20ئەم%20مۆدێلە%20داوا%20بکەم.%20لینک و وێنە: pasti-w-serin/IMG-20260917-WA0011.jpg" target="_blank">📲 داواکردن لە واتسئاپ</a>
 </div>
 <div class="product">
-    <img src="pasti-w-serin/IMG-20260917-WA0012.jpg">
+    <img src="pasti-w-serin/IMG-20260917-WA0012.jpg" onclick="openModal(this)">
     <p>بەرگی پشتی مقلم</p>
     <a class="whatsapp-order-btn" href="https://wa.me/9647721720505?text=سڵاو،%20دەمەوێت%20ئەم%20مۆدێلە%20داوا%20بکەم.%20لینک و وێنە: pasti-w-serin/IMG-20260917-WA0012.jpg" target="_blank">📲 داواکردن لە واتسئاپ</a>
 </div>
 <div class="product">
-    <img src="pasti-w-serin/IMG-20260917-WA0013.jpg">
+    <img src="pasti-w-serin/IMG-20260917-WA0013.jpg" onclick="openModal(this)">
     <p>بەرگی پشتی مقلم</p>
     <a class="whatsapp-order-btn" href="https://wa.me/9647721720505?text=سڵاو،%20دەمەوێت%20ئەم%20مۆدێلە%20داوا%20بکەم.%20لینک و وێنە: pasti-w-serin/IMG-20260917-WA0013.jpg" target="_blank">📲 داواکردن لە واتسئاپ</a>
 </div>
@@ -194,42 +247,42 @@ margin-top:40px;
 <h2>بەرگی مقلم</h2>
 <div class="products">
 <div class="product">
-    <img src="pasti-w-serin/IMG-20240530-WA0013.jpg">
+    <img src="pasti-w-serin/IMG-20240530-WA0013.jpg" onclick="openModal(this)">
     <p>بەرگی مقلم</p>
     <a class="whatsapp-order-btn" href="https://wa.me/9647721720505?text=سڵاو،%20دەمەوێت%20ئەم%20مۆدێلە%20داوا%20بکەم.%20لینک و وێنە: pasti-w-serin/IMG-20240530-WA0013.jpg" target="_blank">📲 داواکردن لە واتسئاپ</a>
 </div>
 <div class="product">
-    <img src="pasti-w-serin/IMG-20240530-WA0017.jpg">
+    <img src="pasti-w-serin/IMG-20240530-WA0017.jpg" onclick="openModal(this)">
     <p>بەرگی مقلم</p>
     <a class="whatsapp-order-btn" href="https://wa.me/9647721720505?text=سڵاو،%20دەمەوێت%20ئەم%20مۆدێلە%20داوا%20بکەم.%20لینک و وێنە: pasti-w-serin/IMG-20240530-WA0017.jpg" target="_blank">📲 داواکردن لە واتسئاپ</a>
 </div>
 <div class="product">
-    <img src="pasti-w-serin/IMG-20240530-WA0018.jpg">
+    <img src="pasti-w-serin/IMG-20240530-WA0018.jpg" onclick="openModal(this)">
     <p>بەرگی مقلم</p>
     <a class="whatsapp-order-btn" href="https://wa.me/9647721720505?text=سڵاو،%20دەمەوێت%20ئەم%20مۆدێلە%20داوا%20بکەم.%20لینک و وێنە: pasti-w-serin/IMG-20240530-WA0018.jpg" target="_blank">📲 داواکردن لە واتسئاپ</a>
 </div>
 <div class="product">
-    <img src="pasti-w-serin/IMG-20240530-WA0019.jpg">
+    <img src="pasti-w-serin/IMG-20240530-WA0019.jpg" onclick="openModal(this)">
     <p>بەرگی مقلم</p>
     <a class="whatsapp-order-btn" href="https://wa.me/9647721720505?text=سڵاو،%20دەمەوێت%20ئەم%20مۆدێلە%20داوا%20بکەم.%20لینک و وێنە: pasti-w-serin/IMG-20240530-WA0019.jpg" target="_blank">📲 داواکردن لە واتسئاپ</a>
 </div>
 <div class="product">
-    <img src="pasti-w-serin/IMG-20240530-WA0020.jpg">
+    <img src="pasti-w-serin/IMG-20240530-WA0020.jpg" onclick="openModal(this)">
     <p>بەرگی مقلم</p>
     <a class="whatsapp-order-btn" href="https://wa.me/9647721720505?text=سڵاو،%20دەمەوێت%20ئەم%20مۆدێلە%20داوا%20بکەم.%20لینک و وێنە: pasti-w-serin/IMG-20240530-WA0020.jpg" target="_blank">📲 داواکردن لە واتسئاپ</a>
 </div>
 <div class="product">
-    <img src="pasti-w-serin/IMG-20240530-WA0021.jpg">
+    <img src="pasti-w-serin/IMG-20240530-WA0021.jpg" onclick="openModal(this)">
     <p>بەرگی مقلم</p>
     <a class="whatsapp-order-btn" href="https://wa.me/9647721720505?text=سڵاو،%20دەمەوێت%20ئەم%20مۆدێلە%20داوا%20بکەم.%20لینک و وێنە: pasti-w-serin/IMG-20240530-WA0021.jpg" target="_blank">📲 داواکردن لە واتسئاپ</a>
 </div>
 <div class="product">
-    <img src="pasti-w-serin/IMG-20240927-WA0016.jpg">
+    <img src="pasti-w-serin/IMG-20240927-WA0016.jpg" onclick="openModal(this)">
     <p>بەرگی مقلم</p>
     <a class="whatsapp-order-btn" href="https://wa.me/9647721720505?text=سڵاو،%20دەمەوێت%20ئەم%20مۆدێلە%20داوا%20بکەم.%20لینک و وێنە: pasti-w-serin/IMG-20240927-WA0016.jpg" target="_blank">📲 داواکردن لە واتسئاپ</a>
 </div>
 <div class="product">
-    <img src="pasti-w-serin/IMG-20240927-WA0017.jpg">
+    <img src="pasti-w-serin/IMG-20240927-WA0017.jpg" onclick="openModal(this)">
     <p>بەرگی مقلم</p>
     <a class="whatsapp-order-btn" href="https://wa.me/9647721720505?text=سڵاو،%20دەمەوێت%20ئەم%20مۆدێلە%20داوا%20بکەم.%20لینک و وێنە: pasti-w-serin/IMG-20240927-WA0017.jpg" target="_blank">📲 داواکردن لە واتسئاپ</a>
 </div>
@@ -239,27 +292,27 @@ margin-top:40px;
 <h2>بەرگی اسڵی</h2>
 <div class="products">
 <div class="product">
-    <img src="pasti-w-serin/1788182642114.jpg">
+    <img src="pasti-w-serin/1788182642114.jpg" onclick="openModal(this)">
     <p>بەرگی اسڵی</p>
     <a class="whatsapp-order-btn" href="https://wa.me/9647721720505?text=سڵاو،%20دەمەوێت%20ئەم%20مۆدێلە%20داوا%20بکەم.%20لینک و وێنە: pasti-w-serin/1788182642114.jpg" target="_blank">📲 داواکردن لە واتسئاپ</a>
 </div>
 <div class="product">
-    <img src="pasti-w-serin/1788182694876.jpg">
+    <img src="pasti-w-serin/1788182694876.jpg" onclick="openModal(this)">
     <p>بەرگی اسڵی</p>
     <a class="whatsapp-order-btn" href="https://wa.me/9647721720505?text=سڵاو،%20دەمەوێت%20ئەم%20مۆدێلە%20داوا%20بکەم.%20لینک و وێنە: pasti-w-serin/1788182694876.jpg" target="_blank">📲 داواکردن لە واتسئاپ</a>
 </div>
 <div class="product">
-    <img src="pasti-w-serin/1788182700791.jpg">
+    <img src="pasti-w-serin/1788182700791.jpg" onclick="openModal(this)">
     <p>بەرگی اسڵی</p>
     <a class="whatsapp-order-btn" href="https://wa.me/9647721720505?text=سڵاو،%20دەمەوێت%20ئەم%20مۆدێلە%20داوا%20بکەم.%20لینک و وێنە: pasti-w-serin/1788182700791.jpg" target="_blank">📲 داواکردن لە واتسئاپ</a>
 </div>
 <div class="product">
-    <img src="pasti-w-serin/1788182707464.jpg">
+    <img src="pasti-w-serin/1788182707464.jpg" onclick="openModal(this)">
     <p>بەرگی اسڵی</p>
     <a class="whatsapp-order-btn" href="https://wa.me/9647721720505?text=سڵاو،%20دەمەوێت%20ئەم%20مۆدێلە%20داوا%20بکەم.%20لینک و وێنە: pasti-w-serin/1788182707464.jpg" target="_blank">📲 داواکردن لە واتسئاپ</a>
 </div>
 <div class="product">
-    <img src="pasti-w-serin/1788182934506.jpg">
+    <img src="pasti-w-serin/1788182934506.jpg" onclick="openModal(this)">
     <p>بەرگی اسڵی</p>
     <a class="whatsapp-order-btn" href="https://wa.me/9647721720505?text=سڵاو،%20دەمەوێت%20ئەم%20مۆدێلە%20داوا%20بکەم.%20لینک و وێنە: pasti-w-serin/1788182934506.jpg" target="_blank">📲 داواکردن لە واتسئاپ</a>
 </div>
@@ -269,37 +322,37 @@ margin-top:40px;
 <h2>بەرگی گوڵینکە</h2>
 <div class="products">
 <div class="product">
-    <img src="pasti-w-serin/IMG-20260916-WA0003(1).jpg">
+    <img src="pasti-w-serin/IMG-20260916-WA0003(1).jpg" onclick="openModal(this)">
     <p>بەرگی گوڵینکە</p>
     <a class="whatsapp-order-btn" href="https://wa.me/9647721720505?text=سڵاو،%20دەمەوێت%20ئەم%20مۆدێلە%20داوا%20بکەم.%20لینک و وێنە: pasti-w-serin/IMG-20260916-WA0003(1).jpg" target="_blank">📲 داواکردن لە واتسئاپ</a>
 </div>
 <div class="product">
-    <img src="pasti-w-serin/file_0000000004ac82109c2a87a9be5a68ef.png">
+    <img src="pasti-w-serin/file_0000000004ac82109c2a87a9be5a68ef.png" onclick="openModal(this)">
     <p>بەرگی گوڵینکە</p>
     <a class="whatsapp-order-btn" href="https://wa.me/9647721720505?text=سڵاو،%20دەمەوێت%20ئەم%20مۆدێلە%20داوا%20بکەم.%20لینک و وێنە: pasti-w-serin/file_0000000004ac82109c2a87a9be5a68ef.png" target="_blank">📲 داواکردن لە واتسئاپ</a>
 </div>
 <div class="product">
-    <img src="pasti-w-serin/file_000000003e5081f68b6dc65d3d13c250.png">
+    <img src="pasti-w-serin/file_000000003e5081f68b6dc65d3d13c250.png" onclick="openModal(this)">
     <p>بەرگی گوڵینکە</p>
     <a class="whatsapp-order-btn" href="https://wa.me/9647721720505?text=سڵاو،%20دەمەوێت%20ئەم%20مۆدێلە%20داوا%20بکەم.%20لینک و وێنە: pasti-w-serin/file_000000003e5081f68b6dc65d3d13c250.png" target="_blank">📲 داواکردن لە واتسئاپ</a>
 </div>
 <div class="product">
-    <img src="pasti-w-serin/file_00000000bc7081f493f915de6844abdd.png">
+    <img src="pasti-w-serin/file_00000000bc7081f493f915de6844abdd.png" onclick="openModal(this)">
     <p>بەرگی گوڵینکە</p>
     <a class="whatsapp-order-btn" href="https://wa.me/9647721720505?text=سڵاو،%20دەمەوێت%20ئەم%20مۆدێلە%20داوا%20بکەم.%20لینک و وێنە: pasti-w-serin/file_00000000bc7081f493f915de6844abdd.png" target="_blank">📲 داواکردن لە واتسئاپ</a>
 </div>
 <div class="product">
-    <img src="pasti-w-serin/file_00000000bef88243b7768c1b9c34b582.png">
+    <img src="pasti-w-serin/file_00000000bef88243b7768c1b9c34b582.png" onclick="openModal(this)">
     <p>بەرگی گوڵینکە</p>
     <a class="whatsapp-order-btn" href="https://wa.me/9647721720505?text=سڵاو،%20دەمەوێت%20ئەم%20مۆدێلە%20داوا%20بکەم.%20لینک و وێنە: pasti-w-serin/file_00000000bef88243b7768c1b9c34b582.png" target="_blank">📲 داواکردن لە واتسئاپ</a>
 </div>
 <div class="product">
-    <img src="pasti-w-serin/file_00000000e2f48246a17b94f3f4ef14ee.png">
+    <img src="pasti-w-serin/file_00000000e2f48246a17b94f3f4ef14ee.png" onclick="openModal(this)">
     <p>بەرگی گوڵینکە</p>
     <a class="whatsapp-order-btn" href="https://wa.me/9647721720505?text=سڵاو،%20دەمەوێت%20ئەم%20مۆدێلە%20داوا%20بکەم.%20لینک و وێنە: pasti-w-serin/file_00000000e2f48246a17b94f3f4ef14ee.png" target="_blank">📲 داواکردن لە واتسئاپ</a>
 </div>
 <div class="product">
-    <img src="pasti-w-serin/file_00000000529081f5bd88c619ddbceb2d.png">
+    <img src="pasti-w-serin/file_00000000529081f5bd88c619ddbceb2d.png" onclick="openModal(this)">
     <p>بەرگی گوڵینکە</p>
     <a class="whatsapp-order-btn" href="https://wa.me/9647721720505?text=سڵاو،%20دەمەوێت%20ئەم%20مۆدێلە%20داوا%20بکەم.%20لینک و وێنە: pasti-w-serin/file_00000000529081f5bd88c619ddbceb2d.png" target="_blank">📲 داواکردن لە واتسئاپ</a>
 </div>
@@ -309,32 +362,32 @@ margin-top:40px;
 <h2>بەرگی سەرینی فەروو</h2>
 <div class="products">
 <div class="product">
-    <img src="pasti-w-serin/IMG-20260917-WA0014.jpg">
+    <img src="pasti-w-serin/IMG-20260917-WA0014.jpg" onclick="openModal(this)">
     <p>بەرگی سەرینی فەروو</p>
     <a class="whatsapp-order-btn" href="https://wa.me/9647721720505?text=سڵاو،%20دەمەوێت%20ئەم%20مۆدێلە%20داوا%20بکەم.%20لینک و وێنە: pasti-w-serin/IMG-20260917-WA0014.jpg" target="_blank">📲 داواکردن لە واتسئاپ</a>
 </div>
 <div class="product">
-    <img src="pasti-w-serin/IMG-20260917-WA0015.jpg">
+    <img src="pasti-w-serin/IMG-20260917-WA0015.jpg" onclick="openModal(this)">
     <p>بەرگی سەرینی فەروو</p>
     <a class="whatsapp-order-btn" href="https://wa.me/9647721720505?text=سڵاو،%20دەمەوێت%20ئەم%20مۆدێلە%20داوا%20بکەم.%20لینک و وێنە: pasti-w-serin/IMG-20260917-WA0015.jpg" target="_blank">📲 داواکردن لە واتسئاپ</a>
 </div>
 <div class="product">
-    <img src="pasti-w-serin/IMG-20260917-WA0016.jpg">
+    <img src="pasti-w-serin/IMG-20260917-WA0016.jpg" onclick="openModal(this)">
     <p>بەرگی سەرینی فەروو</p>
     <a class="whatsapp-order-btn" href="https://wa.me/9647721720505?text=سڵاو،%20دەمەوێت%20ئەم%20مۆدێلە%20داوا%20بکەم.%20لینک و وێنە: pasti-w-serin/IMG-20260917-WA0016.jpg" target="_blank">📲 داواکردن لە واتسئاپ</a>
 </div>
 <div class="product">
-    <img src="pasti-w-serin/IMG-20260917-WA0018.jpg">
+    <img src="pasti-w-serin/IMG-20260917-WA0018.jpg" onclick="openModal(this)">
     <p>بەرگی سەرینی فەروو</p>
     <a class="whatsapp-order-btn" href="https://wa.me/9647721720505?text=سڵاو،%20دەمەوێت%20ئەم%20مۆدێلە%20داوا%20بکەم.%20لینک و وێنە: pasti-w-serin/IMG-20260917-WA0018.jpg" target="_blank">📲 داواکردن لە واتسئاپ</a>
 </div>
 <div class="product">
-    <img src="pasti-w-serin/IMG-20260917-WA0019.jpg">
+    <img src="pasti-w-serin/IMG-20260917-WA0019.jpg" onclick="openModal(this)">
     <p>بەرگی سەرینی فەروو</p>
     <a class="whatsapp-order-btn" href="https://wa.me/9647721720505?text=سڵاو،%20دەمەوێت%20ئەم%20مۆدێلە%20داوا%20بکەم.%20لینک و وێنە: pasti-w-serin/IMG-20260917-WA0019.jpg" target="_blank">📲 داواکردن لە واتسئاپ</a>
 </div>
 <div class="product">
-    <img src="pasti-w-serin/IMG-20260917-WA0021.jpg">
+    <img src="pasti-w-serin/IMG-20260917-WA0021.jpg" onclick="openModal(this)">
     <p>بەرگی سەرینی فەروو</p>
     <a class="whatsapp-order-btn" href="https://wa.me/9647721720505?text=سڵاو،%20دەمەوێت%20ئەم%20مۆدێلە%20داوا%20بکەم.%20لینک و وێنە: pasti-w-serin/IMG-20260917-WA0021.jpg" target="_blank">📲 داواکردن لە واتسئاپ</a>
 </div>
@@ -344,27 +397,27 @@ margin-top:40px;
 <h2>بەرگی کوردی ئەسڵی</h2>
 <div class="products">
 <div class="product">
-    <img src="pasti-w-serin/WhatsApp Image 2026-09-23 at 16.12.50.jpeg">
+    <img src="pasti-w-serin/WhatsApp Image 2026-09-23 at 16.12.50.jpeg" onclick="openModal(this)">
     <p>بەرگی کوردی ئەسڵی</p>
     <a class="whatsapp-order-btn" href="https://wa.me/9647721720505?text=سڵاو،%20دەمەوێت%20ئەم%20مۆدێلە%20داوا%20بکەم.%20لینک و وێنە: pasti-w-serin/WhatsApp%20Image%202026-09-23%20at%2016.12.50.jpeg" target="_blank">📲 داواکردن لە واتسئاپ</a>
 </div>
 <div class="product">
-    <img src="pasti-w-serin/WhatsApp Image 2026-09-23 at 16.12.51.jpeg">
+    <img src="pasti-w-serin/WhatsApp Image 2026-09-23 at 16.12.51.jpeg" onclick="openModal(this)">
     <p>بەرگی کوردی ئەسڵی</p>
     <a class="whatsapp-order-btn" href="https://wa.me/9647721720505?text=سڵاو،%20دەمەوێت%20ئەم%20مۆدێلە%20داوا%20بکەم.%20لینک و وێنە: pasti-w-serin/WhatsApp%20Image%202026-09-23%20at%2016.12.51.jpeg" target="_blank">📲 داواکردن لە واتسئاپ</a>
 </div>
 <div class="product">
-    <img src="pasti-w-serin/WhatsApp Image 2026-09-23 at 16.12.52.jpeg">
+    <img src="pasti-w-serin/WhatsApp Image 2026-09-23 at 16.12.52.jpeg" onclick="openModal(this)">
     <p>بەرگی کوردی ئەسڵی</p>
     <a class="whatsapp-order-btn" href="https://wa.me/9647721720505?text=سڵاو،%20دەمەوێت%20ئەم%20مۆدێلە%20داوا%20بکەم.%20لینک و وێنە: pasti-w-serin/WhatsApp%20Image%202026-09-23%20at%2016.12.52.jpeg" target="_blank">📲 داواکردن لە واتسئاپ</a>
 </div>
 <div class="product">
-    <img src="pasti-w-serin/WhatsApp Image 2026-09-23 at 16.12.53.jpeg">
+    <img src="pasti-w-serin/WhatsApp Image 2026-09-23 at 16.12.53.jpeg" onclick="openModal(this)">
     <p>بەرگی کوردی ئەسڵی</p>
     <a class="whatsapp-order-btn" href="https://wa.me/9647721720505?text=سڵاو،%20دەمەوێت%20ئەم%20مۆدێلە%20داوا%20بکەم.%20لینک و وێنە: pasti-w-serin/WhatsApp%20Image%202026-09-23%20at%2016.12.53.jpeg" target="_blank">📲 داواکردن لە واتسئاپ</a>
 </div>
 <div class="product">
-    <img src="pasti-w-serin/WhatsApp Image 2026-09-23 at 16.15.28.jpeg">
+    <img src="pasti-w-serin/WhatsApp Image 2026-09-23 at 16.15.28.jpeg" onclick="openModal(this)">
     <p>بەرگی کوردی ئەسڵی</p>
     <a class="whatsapp-order-btn" href="https://wa.me/9647721720505?text=سڵاو،%20دەمەوێت%20ئەم%20مۆدێلە%20داوا%20بکەم.%20لینک و وێنە: pasti-w-serin/WhatsApp%20Image%202026-09-23%20at%2016.15.28.jpeg" target="_blank">📲 داواکردن لە واتسئاپ</a>
 </div>
@@ -374,22 +427,22 @@ margin-top:40px;
 <h2>بەرگی سیمدار</h2>
 <div class="products">
 <div class="product">
-    <img src="pasti-w-serin/20250524_152450.jpg">
+    <img src="pasti-w-serin/20250524_152450.jpg" onclick="openModal(this)">
     <p>بەرگی سیمدار</p>
     <a class="whatsapp-order-btn" href="https://wa.me/9647721720505?text=سڵاو،%20دەمەوێت%20ئەم%20مۆدێلە%20داوا%20بکەم.%20لینک و وێنە: pasti-w-serin/20250524_152450.jpg" target="_blank">📲 داواکردن لە واتسئاپ</a>
 </div>
 <div class="product">
-    <img src="pasti-w-serin/20250524_152513.jpg">
+    <img src="pasti-w-serin/20250524_152513.jpg" onclick="openModal(this)">
     <p>بەرگی سیمدار</p>
     <a class="whatsapp-order-btn" href="https://wa.me/9647721720505?text=سڵاو،%20دەمەوێت%20ئەم%20مۆدێلە%20داوا%20بکەم.%20لینک و وێنە: pasti-w-serin/20250524_152513.jpg" target="_blank">📲 داواکردن لە واتسئاپ</a>
 </div>
 <div class="product">
-    <img src="pasti-w-serin/IMG-20260917-WA0017.jpg">
+    <img src="pasti-w-serin/IMG-20260917-WA0017.jpg" onclick="openModal(this)">
     <p>بەرگی سیمدار</p>
     <a class="whatsapp-order-btn" href="https://wa.me/9647721720505?text=سڵاو،%20دەمەوێت%20ئەم%20مۆدێلە%20داوا%20بکەم.%20لینک و وێنە: pasti-w-serin/IMG-20260917-WA0017.jpg" target="_blank">📲 داواکردن لە واتسئاپ</a>
 </div>
 <div class="product">
-    <img src="pasti-w-serin/IMG-20260917-WA0020.jpg">
+    <img src="pasti-w-serin/IMG-20260917-WA0020.jpg" onclick="openModal(this)">
     <p>بەرگی سیمدار</p>
     <a class="whatsapp-order-btn" href="https://wa.me/9647721720505?text=سڵاو،%20دەمەوێت%20ئەم%20مۆدێلە%20داوا%20بکەم.%20لینک و وێنە: pasti-w-serin/IMG-20260917-WA0020.jpg" target="_blank">📲 داواکردن لە واتسئاپ</a>
 </div>
@@ -399,32 +452,32 @@ margin-top:40px;
 <h2>مۆدێلی نوێ</h2>
 <div class="products">
 <div class="product">
-    <img src="pasti-w-serin/WhatsApp Image 2026-10-05 at 10.41.34.jpeg">
+    <img src="pasti-w-serin/WhatsApp Image 2026-10-05 at 10.41.34.jpeg" onclick="openModal(this)">
     <p>مۆدێلی نوێ</p>
     <a class="whatsapp-order-btn" href="https://wa.me/9647721720505?text=سڵاو،%20دەمەوێت%20ئەم%20مۆدێلە%20داوا%20بکەم.%20لینک و وێنە: pasti-w-serin/WhatsApp%20Image%202026-10-05%20at%2010.41.34.jpeg" target="_blank">📲 داواکردن لە واتسئاپ</a>
 </div>
 <div class="product">
-    <img src="pasti-w-serin/WhatsApp Image 2026-10-05 at 10.41.35.jpeg">
+    <img src="pasti-w-serin/WhatsApp Image 2026-10-05 at 10.41.35.jpeg" onclick="openModal(this)">
     <p>مۆدێلی نوێ</p>
     <a class="whatsapp-order-btn" href="https://wa.me/9647721720505?text=سڵاو،%20دەمەوێت%20ئەم%20مۆدێلە%20داوا%20بکەم.%20لینک و وێنە: pasti-w-serin/WhatsApp%20Image%202026-10-05%20at%2010.41.35.jpeg" target="_blank">📲 داواکردن لە واتسئاپ</a>
 </div>
 <div class="product">
-    <img src="pasti-w-serin/WhatsApp Image 2026-10-05 at 10.41.36.jpeg">
+    <img src="pasti-w-serin/WhatsApp Image 2026-10-05 at 10.41.36.jpeg" onclick="openModal(this)">
     <p>مۆدێلی نوێ</p>
     <a class="whatsapp-order-btn" href="https://wa.me/9647721720505?text=سڵاو،%20دەمەوێت%20ئەم%20مۆدێلە%20داوا%20بکەم.%20لینک و وێنە: pasti-w-serin/WhatsApp%20Image%202026-10-05%20at%2010.41.36.jpeg" target="_blank">📲 داواکردن لە واتسئاپ</a>
 </div>
 <div class="product">
-    <img src="pasti-w-serin/WhatsApp Image 2026-10-05 at 10.41.37.jpeg">
+    <img src="pasti-w-serin/WhatsApp Image 2026-10-05 at 10.41.37.jpeg" onclick="openModal(this)">
     <p>مۆدێلی نوێ</p>
     <a class="whatsapp-order-btn" href="https://wa.me/9647721720505?text=سڵاو،%20دەمەوێت%20ئەم%20مۆدێلە%20داوا%20بکەم.%20لینک و وێنە: pasti-w-serin/WhatsApp%20Image%202026-10-05%20at%2010.41.37.jpeg" target="_blank">📲 داواکردن لە واتسئاپ</a>
 </div>
 <div class="product">
-    <img src="pasti-w-serin/WhatsApp Image 2026-10-05 at 10.41.38.jpeg">
+    <img src="pasti-w-serin/WhatsApp Image 2026-10-05 at 10.41.38.jpeg" onclick="openModal(this)">
     <p>مۆدێلی نوێ</p>
     <a class="whatsapp-order-btn" href="https://wa.me/9647721720505?text=سڵاو،%20دەمەوێت%20ئەم%20مۆدێلە%20داوا%20بکەم.%20لینک و وێنە: pasti-w-serin/WhatsApp%20Image%202026-10-05%20at%2010.41.38.jpeg" target="_blank">📲 داواکردن لە واتسئاپ</a>
 </div>
 <div class="product">
-    <img src="pasti-w-serin/WhatsApp Image 2026-10-05 at 10.41.39.jpeg">
+    <img src="pasti-w-serin/WhatsApp Image 2026-10-05 at 10.41.39.jpeg" onclick="openModal(this)">
     <p>مۆدێلی نوێ</p>
     <a class="whatsapp-order-btn" href="https://wa.me/9647721720505?text=سڵاو،%20دەمەوێت%20ئەم%20مۆدێلە%20داوا%20بکەم.%20لینک و وێنە: pasti-w-serin/WhatsApp%20Image%202026-10-05%20at%2010.41.39.jpeg" target="_blank">📲 داواکردن لە واتسئاپ</a>
 </div>
@@ -436,9 +489,40 @@ margin-top:40px;
 
 </section>
 
+<!-- پەنجەرەی گەورەکردنی وێنە (Lightbox Modal) -->
+<div id="imageModal" onclick="closeModal()">
+    <span class="close-modal">&times;</span>
+    <img id="modalImg">
+    <div id="modalCaption"></div>
+</div>
+
 <footer>
 © کۆمپانیای ئاسیان الزەهەبی - سەرجەم مافەکان پارێزراون
 </footer>
+
+<!-- سکریپتی گەورەکردنی وێنەکان -->
+<script>
+function openModal(img) {
+    const modal = document.getElementById("imageModal");
+    const modalImg = document.getElementById("modalImg");
+    const captionText = document.getElementById("modalCaption");
+    
+    modal.style.display = "block";
+    modalImg.src = img.src;
+    
+    const productBox = img.closest('.product');
+    if (productBox) {
+        const caption = productBox.querySelector("p");
+        if (caption) {
+            captionText.innerHTML = caption.innerHTML;
+        }
+    }
+}
+
+function closeModal() {
+    document.getElementById("imageModal").style.display = "none";
+}
+</script>
 
 </body>
 </html>
