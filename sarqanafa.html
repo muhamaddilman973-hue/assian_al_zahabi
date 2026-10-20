@@ -85,6 +85,12 @@ section {
     height: auto;
     display: block;
     background: #000;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.product img:hover {
+    transform: scale(1.03);
 }
 
 .product p {
@@ -92,6 +98,53 @@ section {
     padding: 12px;
     margin: 0;
     font-size: 15px;
+}
+
+/* دیزاینی پەنجەرەی گەورەکردنی وێنە (Lightbox Modal) */
+#imageModal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    padding-top: 50px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+#modalImg {
+    margin: auto;
+    display: block;
+    max-width: 90%;
+    max-height: 85vh;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(255,255,255,0.2);
+}
+
+#modalCaption {
+    margin: 15px auto;
+    text-align: center;
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: bold;
+    width: 80%;
+}
+
+.close-modal {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    color: #f1f1f1;
+    font-size: 45px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.close-modal:hover {
+    color: #c084fc;
 }
 
 .whatsapp-order-btn {
@@ -181,245 +234,270 @@ footer {
 <h2>لیستی بەرهەمەکانی سەرقەنەفە</h2>
 <div class="products">
 
-<!-- ٥ وێنە نوێیەکە -->
+<!-- ٤ وێنە نوێیەکە -->
 <div class="product">
-<img src="sarqanafa/WhatsApp Image 2026-10-13 at 11.36.24.jpeg" alt="سەرقەنەفە">
+<img src="sarqanafa/WhatsApp Image 2026-10-19 at 14.09.28.jpeg" alt="سەرقەنەفە" onclick="openModal(this)">
+<p>سەرقەنەفەی فەروو پشت لاستیک اسڵی  </p>
+<a class="whatsapp-order-btn" href="https://wa.me/9647721720505?text=سڵاو،%20دەمەوێت%20مۆدێلی%20(سەرقەنەفە)%20داوا%20بکەم." target="_blank">📲 داواکردن لە واتسئاپ</a>
+</div>
+
+<div class="product">
+<img src="sarqanafa/WhatsApp Image 2026-10-19 at 14.09.29.jpeg" alt="سەرقەنەفە" onclick="openModal(this)">
+<p>سەرقەنەفەی فەروو پشت لاستیک اسڵی   </p>
+<a class="whatsapp-order-btn" href="https://wa.me/9647721720505?text=سڵاو،%20دەمەوێت%20مۆدێلی%20(سەرقەنەفە)%20داوا%20بکەم." target="_blank">📲 داواکردن لە واتسئاپ</a>
+</div>
+
+<div class="product">
+<img src="sarqanafa/WhatsApp Image 2026-10-19 at 14.09.30.jpeg" alt="سەرقەنەفە" onclick="openModal(this)">
+<p>سەرقەنەفەی فەروو پشت لاستیک اسڵی   </p>
+<a class="whatsapp-order-btn" href="https://wa.me/9647721720505?text=سڵاو،%20دەمەوێت%20مۆدێلی%20(سەرقەنەفە)%20داوا%20بکەم." target="_blank">📲 داواکردن لە واتسئاپ</a>
+</div>
+
+<div class="product">
+<img src="sarqanafa/WhatsApp Image 2026-10-19 at 14.09.31.jpeg" alt="سەرقەنەفە" onclick="openModal(this)">
+<p>سەرقەنەفەی فەروو پشت لاستیک اسڵی  </p>
+<a class="whatsapp-order-btn" href="https://wa.me/9647721720505?text=سڵاو،%20دەمەوێت%20مۆدێلی%20(سەرقەنەفە)%20داوا%20بکەم." target="_blank">📲 داواکردن لە واتسئاپ</a>
+</div>
+
+<!-- ٥ وێنەکەی پێشوو -->
+<div class="product">
+<img src="sarqanafa/WhatsApp Image 2026-10-13 at 11.36.24.jpeg" alt="سەرقەنەفە" onclick="openModal(this)">
 <p>سەرقەنەفەی پشت موگناتیس 70 سم </p>
 <a class="whatsapp-order-btn" href="https://wa.me/9647721720505?text=سڵاو،%20دەمەوێت%20مۆدێلی%20(سەرقەنەفە)%20داوا%20بکەم." target="_blank">📲 داواکردن لە واتسئاپ</a>
 </div>
 
 <div class="product">
-<img src="sarqanafa/WhatsApp Image 2026-10-13 at 14.02.32.jpeg" alt="سەرقەنەفە">
+<img src="sarqanafa/WhatsApp Image 2026-10-13 at 14.02.32.jpeg" alt="سەرقەنەفە" onclick="openModal(this)">
 <p>سەرقەنەفەی پشت مگناتیس 70 سم</p>
 <a class="whatsapp-order-btn" href="https://wa.me/9647721720505?text=سڵاو،%20دەمەوێت%20مۆدێلی%20(سەرقەنەفە)%20داوا%20بکەم." target="_blank">📲 داواکردن لە واتسئاپ</a>
 </div>
 
 <div class="product">
-<img src="sarqanafa/WhatsApp Image 2026-10-13 at 14.02.33.jpeg" alt="سەرقەنەفە">
+<img src="sarqanafa/WhatsApp Image 2026-10-13 at 14.02.33.jpeg" alt="سەرقەنەفە" onclick="openModal(this)">
 <p>سەرقەنەفەی پشت مگناتیس 70 سم</p>
 <a class="whatsapp-order-btn" href="https://wa.me/9647721720505?text=سڵاو،%20دەمەوێت%20مۆدێلی%20(سەرقەنەفە)%20داوا%20بکەم." target="_blank">📲 داواکردن لە واتسئاپ</a>
 </div>
 
 <div class="product">
-<img src="sarqanafa/WhatsApp Image 2026-10-13 at 14.02.34.jpeg" alt="سەرقەنەفە">
+<img src="sarqanafa/WhatsApp Image 2026-10-13 at 14.02.34.jpeg" alt="سەرقەنەفە" onclick="openModal(this)">
 <p>سەرقەنەفەی پشت مگناتیس 70 سم</p>
 <a class="whatsapp-order-btn" href="https://wa.me/9647721720505?text=سڵاو،%20دەمەوێت%20مۆدێلی%20(سەرقەنەفە)%20داوا%20بکەم." target="_blank">📲 داواکردن لە واتسئاپ</a>
 </div>
 
 <div class="product">
-<img src="sarqanafa/WhatsApp Image 2026-10-13 at 14.02.35.jpeg" alt="سەرقەنەفە">
+<img src="sarqanafa/WhatsApp Image 2026-10-13 at 14.02.35.jpeg" alt="سەرقەنەفە" onclick="openModal(this)">
 <p>سەرقەنەفەی پشت مگناتیس 70 سم</p>
 <a class="whatsapp-order-btn" href="https://wa.me/9647721720505?text=سڵاو،%20دەمەوێت%20مۆدێلی%20(سەرقەنەفە)%20داوا%20بکەم." target="_blank">📲 داواکردن لە واتسئاپ</a>
 </div>
 
 <!-- وێنەکانی پێشوو: پشت شانە هەنگ 70 سم -->
 <div class="product">
-<img src="sarqanafa/WhatsApp Image 2026-10-07 at 14.20.100.jpeg" alt="سەرقەنەفە">
+<img src="sarqanafa/WhatsApp Image 2026-10-07 at 14.20.100.jpeg" alt="سەرقەنەفە" onclick="openModal(this)">
 <p>سەرقەنەفەی پشت شانە هەنگ 70 سم</p>
 <a class="whatsapp-order-btn" href="https://wa.me/9647721720505?text=سڵاو،%20دەمەوێت%20مۆدێلی%20(سەرقەنەفەی%20پشت%20شانە%20هەنگ%2070%20سم)%20داوا%20بکەم." target="_blank">📲 داواکردن لە واتسئاپ</a>
 </div>
 
 <div class="product">
-<img src="sarqanafa/WhatsApp Image 2026-10-07 at 14.20.101.jpeg" alt="سەرقەنەفە">
+<img src="sarqanafa/WhatsApp Image 2026-10-07 at 14.20.101.jpeg" alt="سەرقەنەفە" onclick="openModal(this)">
 <p>سەرقەنەفەی پشت شانە هەنگ 70 سم</p>
 <a class="whatsapp-order-btn" href="https://wa.me/9647721720505?text=سڵاو،%20دەمەوێت%20مۆدێلی%20(سەرقەنەفەی%20پشت%20شانە%20هەنگ%2070%20سم)%20داوا%20بکەم." target="_blank">📲 داواکردن لە واتسئاپ</a>
 </div>
 
 <div class="product">
-<img src="sarqanafa/WhatsApp Image 2026-10-07 at 14.20.0010.jpeg" alt="سەرقەنەفە">
+<img src="sarqanafa/WhatsApp Image 2026-10-07 at 14.20.0010.jpeg" alt="سەرقەنەفە" onclick="openModal(this)">
 <p>سەرقەنەفەی پشت شانە هەنگ 70 سم</p>
 <a class="whatsapp-order-btn" href="https://wa.me/9647721720505?text=سڵاو،%20دەمەوێت%20مۆدێلی%20(سەرقەنەفەی%20پشت%20شانە%20هەنگ%2070%20سم)%20داوا%20بکەم." target="_blank">📲 داواکردن لە واتسئاپ</a>
 </div>
 
 <div class="product">
-<img src="sarqanafa/WhatsApp Image 2026-10-07 at 14.20.0011.jpeg" alt="سەرقەنەفە">
+<img src="sarqanafa/WhatsApp Image 2026-10-07 at 14.20.0011.jpeg" alt="سەرقەنەفە" onclick="openModal(this)">
 <p>سەرقەنەفەی پشت شانە هەنگ 70 سم</p>
 <a class="whatsapp-order-btn" href="https://wa.me/9647721720505?text=سڵاو،%20دەمەوێت%20مۆدێلی%20(سەرقەنەفەی%20پشت%20شانە%20هەنگ%2070%20سم)%20داوا%20بکەم." target="_blank">📲 داواکردن لە واتسئاپ</a>
 </div>
 
 <div class="product">
-<img src="sarqanafa/WhatsApp Image 2026-10-07 at 14.20.0012.jpeg" alt="سەرقەنەفە">
+<img src="sarqanafa/WhatsApp Image 2026-10-07 at 14.20.0012.jpeg" alt="سەرقەنەفە" onclick="openModal(this)">
 <p>سەرقەنەفەی پشت شانە هەنگ 70 سم</p>
 <a class="whatsapp-order-btn" href="https://wa.me/9647721720505?text=سڵاو،%20دەمەوێت%20مۆدێلی%20(سەرقەنەفەی%20پشت%20شانە%20هەنگ%2070%20سم)%20داوا%20بکەم." target="_blank">📲 داواکردن لە واتسئاپ</a>
 </div>
 
 <div class="product">
-<img src="sarqanafa/WhatsApp Image 2026-10-07 at 14.20.0013.jpeg" alt="سەرقەنەفە">
+<img src="sarqanafa/WhatsApp Image 2026-10-07 at 14.20.0013.jpeg" alt="سەرقەنەفە" onclick="openModal(this)">
 <p>سەرقەنەفەی پشت شانە هەنگ 70 سم</p>
 <a class="whatsapp-order-btn" href="https://wa.me/9647721720505?text=سڵاو،%20دەمەوێت%20مۆدێلی%20(سەرقەنەفەی%20پشت%20شانە%20هەنگ%2070%20سم)%20داوا%20بکەم." target="_blank">📲 داواکردن لە واتسئاپ</a>
 </div>
 
 <div class="product">
-<img src="sarqanafa/WhatsApp Image 2026-10-07 at 14.20.0014.jpeg" alt="سەرقەنەفە">
+<img src="sarqanafa/WhatsApp Image 2026-10-07 at 14.20.0014.jpeg" alt="سەرقەنەفە" onclick="openModal(this)">
 <p>سەرقەنەفەی پشت شانە هەنگ 70 سم</p>
 <a class="whatsapp-order-btn" href="https://wa.me/9647721720505?text=سڵاو،%20دەمەوێت%20مۆدێلی%20(سەرقەنەفەی%20پشت%20شانە%20هەنگ%2070%20سم)%20داوا%20بکەم." target="_blank">📲 داواکردن لە واتسئاپ</a>
 </div>
 
 <div class="product">
-<img src="sarqanafa/WhatsApp Image 2026-10-07 at 14.20.0015.jpeg" alt="سەرقەنەفە">
+<img src="sarqanafa/WhatsApp Image 2026-10-07 at 14.20.0015.jpeg" alt="سەرقەنەفە" onclick="openModal(this)">
 <p>سەرقەنەفەی پشت شانە هەنگ 70 سم</p>
 <a class="whatsapp-order-btn" href="https://wa.me/9647721720505?text=سڵاو،%20دەمەوێت%20مۆدێلی%20(سەرقەنەفەی%20پشت%20شانە%20هەنگ%2070%20سم)%20داوا%20بکەم." target="_blank">📲 داواکردن لە واتسئاپ</a>
 </div>
 
 <div class="product">
-<img src="sarqanafa/WhatsApp Image 2026-10-07 at 14.20.0016.jpeg" alt="سەرقەنەفە">
+<img src="sarqanafa/WhatsApp Image 2026-10-07 at 14.20.0016.jpeg" alt="سەرقەنەفە" onclick="openModal(this)">
 <p>سەرقەنەفەی پشت شانە هەنگ 70 سم</p>
 <a class="whatsapp-order-btn" href="https://wa.me/9647721720505?text=سڵاو،%20دەمەوێت%20مۆدێلی%20(سەرقەنەفەی%20پشت%20شانە%20هەنگ%2070%20سم)%20داوا%20بکەم." target="_blank">📲 داواکردن لە واتسئاپ</a>
 </div>
 
 <div class="product">
-<img src="sarqanafa/WhatsApp Image 2026-10-07 at 14.20.49009.jpeg" alt="سەرقەنەفە">
+<img src="sarqanafa/WhatsApp Image 2026-10-07 at 14.20.49009.jpeg" alt="سەرقەنەفە" onclick="openModal(this)">
 <p>سەرقەنەفەی پشت شانە هەنگ 70 سم</p>
 <a class="whatsapp-order-btn" href="https://wa.me/9647721720505?text=سڵاو،%20دەمەوێت%20مۆدێلی%20(سەرقەنەفەی%20پشت%20شانە%20هەنگ%2070%20سم)%20داوا%20بکەم." target="_blank">📲 داواکردن لە واتسئاپ</a>
 </div>
 
 <!-- وێنەکانی کەروێشکی پشت لاستیک ئەسڵی -->
 <div class="product">
-<img src="sarqanafa/WhatsApp Image 2026-10-07 at 14.20.001.jpeg" alt="سەرقەنەفە">
+<img src="sarqanafa/WhatsApp Image 2026-10-07 at 14.20.001.jpeg" alt="سەرقەنەفە" onclick="openModal(this)">
 <p>سەرقەنەفەی کەروێشکی پشت لاستیک ئەسڵی</p>
 <a class="whatsapp-order-btn" href="https://wa.me/9647721720505?text=سڵاو،%20دەمەوێت%20مۆدێلی%20(سەرقەنەفەی%20کەروێشکی%20پشت%20لاستیک%20ئەسڵی)%20داوا%20بکەم." target="_blank">📲 داواکردن لە واتسئاپ</a>
 </div>
 
 <div class="product">
-<img src="sarqanafa/WhatsApp Image 2026-10-07 at 14.20.002.jpeg" alt="سەرقەنەفە">
+<img src="sarqanafa/WhatsApp Image 2026-10-07 at 14.20.002.jpeg" alt="سەرقەنەفە" onclick="openModal(this)">
 <p>سەرقەنەفەی کەروێشکی پشت لاستیک ئەسڵی</p>
 <a class="whatsapp-order-btn" href="https://wa.me/9647721720505?text=سڵاو،%20دەمەوێت%20مۆدێلی%20(سەرقەنەفەی%20کەروێشکی%20پشت%20لاستیک%20ئەسڵی)%20داوا%20بکەم." target="_blank">📲 داواکردن لە واتسئاپ</a>
 </div>
 
 <div class="product">
-<img src="sarqanafa/WhatsApp Image 2026-10-07 at 14.20.003.jpeg" alt="سەرقەنەفە">
+<img src="sarqanafa/WhatsApp Image 2026-10-07 at 14.20.003.jpeg" alt="سەرقەنەفە" onclick="openModal(this)">
 <p>سەرقەنەفەی کەروێشکی پشت لاستیک ئەسڵی</p>
 <a class="whatsapp-order-btn" href="https://wa.me/9647721720505?text=سڵاو،%20دەمەوێت%20مۆدێلی%20(سەرقەنەفەی%20کەروێشکی%20پشت%20لاستیک%20ئەسڵی)%20داوا%20بکەم." target="_blank">📲 داواکردن لە واتسئاپ</a>
 </div>
 
 <div class="product">
-<img src="sarqanafa/WhatsApp Image 2026-10-07 at 14.20.004.jpeg" alt="سەرقەنەفە">
+<img src="sarqanafa/WhatsApp Image 2026-10-07 at 14.20.004.jpeg" alt="سەرقەنەفە" onclick="openModal(this)">
 <p>سەرقەنەفەی کەروێشکی پشت لاستیک ئەسڵی</p>
 <a class="whatsapp-order-btn" href="https://wa.me/9647721720505?text=سڵاو،%20دەمەوێت%20مۆدێلی%20(سەرقەنەفەی%20کەروێشکی%20پشت%20لاستیک%20ئەسڵی)%20داوا%20بکەم." target="_blank">📲 داواکردن لە واتسئاپ</a>
 </div>
 
 <div class="product">
-<img src="sarqanafa/WhatsApp Image 2026-10-07 at 14.20.44.jpeg" alt="سەرقەنەفە">
+<img src="sarqanafa/WhatsApp Image 2026-10-07 at 14.20.44.jpeg" alt="سەرقەنەفە" onclick="openModal(this)">
 <p>سەرقەنەفەی کەروێشکی پشت لاستیک ئەسڵی</p>
 <a class="whatsapp-order-btn" href="https://wa.me/9647721720505?text=سڵاو،%20دەمەوێت%20مۆدێلی%20(سەرقەنەفەی%20کەروێشکی%20پشت%20لاستیک%20ئەسڵی)%20داوا%20بکەم." target="_blank">📲 داواکردن لە واتسئاپ</a>
 </div>
 
 <div class="product">
-<img src="sarqanafa/WhatsApp Image 2026-10-07 at 14.20.45.jpeg" alt="سەرقەنەفە">
+<img src="sarqanafa/WhatsApp Image 2026-10-07 at 14.20.45.jpeg" alt="سەرقەنەفە" onclick="openModal(this)">
 <p>سەرقەنەفەی کەروێشکی پشت لاستیک ئەسڵی</p>
 <a class="whatsapp-order-btn" href="https://wa.me/9647721720505?text=سڵاو،%20دەمەوێت%20مۆدێلی%20(سەرقەنەفەی%20کەروێشکی%20پشت%20لاستیک%20ئەسڵی)%20داوا%20بکەم." target="_blank">📲 داواکردن لە واتسئاپ</a>
 </div>
 
 <div class="product">
-<img src="sarqanafa/WhatsApp Image 2026-10-07 at 14.20.46.jpeg" alt="سەرقەنەفە">
+<img src="sarqanafa/WhatsApp Image 2026-10-07 at 14.20.46.jpeg" alt="سەرقەنەفە" onclick="openModal(this)">
 <p>سەرقەنەفەی کەروێشکی پشت لاستیک ئەسڵی</p>
 <a class="whatsapp-order-btn" href="https://wa.me/9647721720505?text=سڵاو،%20دەمەوێت%20مۆدێلی%20(سەرقەنەفەی%20کەروێشکی%20پشت%20لاستیک%20ئەسڵی)%20داوا%20بکەم." target="_blank">📲 داواکردن لە واتسئاپ</a>
 </div>
 
 <div class="product">
-<img src="sarqanafa/WhatsApp Image 2026-10-07 at 14.20.47.jpeg" alt="سەرقەنەفە">
+<img src="sarqanafa/WhatsApp Image 2026-10-07 at 14.20.47.jpeg" alt="سەرقەنەفە" onclick="openModal(this)">
 <p>سەرقەنەفەی کەروێشکی پشت لاستیک ئەسڵی</p>
 <a class="whatsapp-order-btn" href="https://wa.me/9647721720505?text=سڵاو،%20دەمەوێت%20مۆدێلی%20(سەرقەنەفەی%20کەروێشکی%20پشت%20لاستیک%20ئەسڵی)%20داوا%20بکەم." target="_blank">📲 داواکردن لە واتسئاپ</a>
 </div>
 
 <div class="product">
-<img src="sarqanafa/WhatsApp Image 2026-10-07 at 14.20.60.jpeg" alt="سەرقەنەفە">
+<img src="sarqanafa/WhatsApp Image 2026-10-07 at 14.20.60.jpeg" alt="سەرقەنەفە" onclick="openModal(this)">
 <p>سەرقەنەفەی کەروێشکی پشت لاستیک ئەسڵی</p>
 <a class="whatsapp-order-btn" href="https://wa.me/9647721720505?text=سڵاو،%20دەمەوێت%20مۆدێلی%20(سەرقەنەفەی%20کەروێشکی%20پشت%20لاستیک%20ئەسڵی)%20داوا%20بکەم." target="_blank">📲 داواکردن لە واتسئاپ</a>
 </div>
 
 <div class="product">
-<img src="sarqanafa/WhatsApp Image 2026-10-07 at 14.20.61.jpeg" alt="سەرقەنەفە">
+<img src="sarqanafa/WhatsApp Image 2026-10-07 at 14.20.61.jpeg" alt="سەرقەنەفە" onclick="openModal(this)">
 <p>سەرقەنەفەی کەروێشکی پشت لاستیک ئەسڵی</p>
 <a class="whatsapp-order-btn" href="https://wa.me/9647721720505?text=سڵاو،%20دەمەوێت%20مۆدێلی%20(سەرقەنەفەی%20کەروێشکی%20پشت%20لاستیک%20ئەسڵی)%20داوا%20بکەم." target="_blank">📲 داواکردن لە واتسئاپ</a>
 </div>
 
 <div class="product">
-<img src="sarqanafa/WhatsApp Image 2026-10-07 at 14.20.62.jpeg" alt="سەرقەنەفە">
+<img src="sarqanafa/WhatsApp Image 2026-10-07 at 14.20.62.jpeg" alt="سەرقەنەفە" onclick="openModal(this)">
 <p>سەرقەنەفەی کەروێشکی پشت لاستیک ئەسڵی</p>
 <a class="whatsapp-order-btn" href="https://wa.me/9647721720505?text=سڵاو،%20دەمەوێت%20مۆدێلی%20(سەرقەنەفەی%20کەروێشکی%20پشت%20لاستیک%20ئەسڵی)%20داوا%20بکەم." target="_blank">📲 داواکردن لە واتسئاپ</a>
 </div>
 
 <div class="product">
-<img src="sarqanafa/WhatsApp Image 2026-10-07 at 14.20.63.jpeg" alt="سەرقەنەفە">
+<img src="sarqanafa/WhatsApp Image 2026-10-07 at 14.20.63.jpeg" alt="سەرقەنەفە" onclick="openModal(this)">
 <p>سەرقەنەفەی کەروێشکی پشت لاستیک ئەسڵی</p>
 <a class="whatsapp-order-btn" href="https://wa.me/9647721720505?text=سڵاو،%20دەمەوێت%20مۆدێلی%20(سەرقەنەفەی%20کەروێشکی%20پشت%20لاستیک%20ئەسڵی)%20داوا%20بکەم." target="_blank">📲 داواکردن لە واتسئاپ</a>
 </div>
 
 <div class="product">
-<img src="sarqanafa/WhatsApp Image 2026-10-07 at 14.20.64.jpeg" alt="سەرقەنەفە">
+<img src="sarqanafa/WhatsApp Image 2026-10-07 at 14.20.64.jpeg" alt="سەرقەنەفە" onclick="openModal(this)">
 <p>سەرقەنەفەی کەروێشکی پشت لاستیک ئەسڵی</p>
 <a class="whatsapp-order-btn" href="https://wa.me/9647721720505?text=سڵاو،%20دەمەوێت%20مۆدێلی%20(سەرقەنەفەی%20کەروێشکی%20پشت%20لاستیک%20ئەسڵی)%20داوا%20بکەم." target="_blank">📲 داواکردن لە واتسئاپ</a>
 </div>
 
 <div class="product">
-<img src="sarqanafa/WhatsApp Image 2026-10-07 at 14.20.65.jpeg" alt="سەرقەنەفە">
+<img src="sarqanafa/WhatsApp Image 2026-10-07 at 14.20.65.jpeg" alt="سەرقەنەفە" onclick="openModal(this)">
 <p>سەرقەنەفەی کەروێشکی پشت لاستیک ئەسڵی</p>
 <a class="whatsapp-order-btn" href="https://wa.me/9647721720505?text=سڵاو،%20دەمەوێت%20مۆدێلی%20(سەرقەنەفەی%20کەروێشکی%20پشت%20لاستیک%20ئەسڵی)%20داوا%20بکەم." target="_blank">📲 داواکردن لە واتسئاپ</a>
 </div>
 
 <div class="product">
-<img src="sarqanafa/WhatsApp Image 2026-10-07 at 14.20.1.jpeg" alt="سەرقەنەفە">
+<img src="sarqanafa/WhatsApp Image 2026-10-07 at 14.20.1.jpeg" alt="سەرقەنەفە" onclick="openModal(this)">
 <p>سەرقەنەفەی کەروێشکی پشت لاستیک ئەسڵی</p>
 <a class="whatsapp-order-btn" href="https://wa.me/9647721720505?text=سڵاو،%20دەمەوێت%20مۆدێلی%20(سەرقەنەفەی%20کەروێشکی%20پشت%20لاستیک%20ئەسڵی)%20داوا%20بکەم." target="_blank">📲 داواکردن لە واتسئاپ</a>
 </div>
 
 <div class="product">
-<img src="sarqanafa/WhatsApp Image 2026-10-07 at 14.20.2.jpeg" alt="سەرقەنەفە">
+<img src="sarqanafa/WhatsApp Image 2026-10-07 at 14.20.2.jpeg" alt="سەرقەنەفە" onclick="openModal(this)">
 <p>سەرقەنەفەی کەروێشکی پشت لاستیک ئەسڵی</p>
 <a class="whatsapp-order-btn" href="https://wa.me/9647721720505?text=سڵاو،%20دەمەوێت%20مۆدێلی%20(سەرقەنەفەی%20کەروێشکی%20پشت%20لاستیک%20ئەسڵی)%20داوا%20بکەم." target="_blank">📲 داواکردن لە واتسئاپ</a>
 </div>
 
 <div class="product">
-<img src="sarqanafa/WhatsApp Image 2026-10-07 at 14.20.3.jpeg" alt="سەرقەنەفە">
+<img src="sarqanafa/WhatsApp Image 2026-10-07 at 14.20.3.jpeg" alt="سەرقەنەفە" onclick="openModal(this)">
 <p>سەرقەنەفەی کەروێشکی پشت لاستیک ئەسڵی</p>
 <a class="whatsapp-order-btn" href="https://wa.me/9647721720505?text=سڵاو،%20دەمەوێت%20مۆدێلی%20(سەرقەنەفەی%20کەروێشکی%20پشت%20لاستیک%20ئەسڵی)%20داوا%20بکەم." target="_blank">📲 داواکردن لە واتسئاپ</a>
 </div>
 
 <div class="product">
-<img src="sarqanafa/WhatsApp Image 2026-10-07 at 14.20.4.jpeg" alt="سەرقەنەفە">
+<img src="sarqanafa/WhatsApp Image 2026-10-07 at 14.20.4.jpeg" alt="سەرقەنەفە" onclick="openModal(this)">
 <p>سەرقەنەفەی کەروێشکی پشت لاستیک ئەسڵی</p>
 <a class="whatsapp-order-btn" href="https://wa.me/9647721720505?text=سڵاو،%20دەمەوێت%20مۆدێلی%20(سەرقەنەفەی%20کەروێشکی%20پشت%20لاستیک%20ئەسڵی)%20داوا%20بکەم." target="_blank">📲 داواکردن لە واتسئاپ</a>
 </div>
 
 <div class="product">
-<img src="sarqanafa/WhatsApp Image 2026-10-07 at 14.20.10.jpeg" alt="سەرقەنەفە">
+<img src="sarqanafa/WhatsApp Image 2026-10-07 at 14.20.10.jpeg" alt="سەرقەنەفە" onclick="openModal(this)">
 <p>سەرقەنەفەی کەروێشکی پشت لاستیک ئەسڵی</p>
 <a class="whatsapp-order-btn" href="https://wa.me/9647721720505?text=سڵاو،%20دەمەوێت%20مۆدێلی%20(سەرقەنەفەی%20کەروێشکی%20پشت%20لاستیک%20ئەسڵی)%20داوا%20بکەم." target="_blank">📲 داواکردن لە واتسئاپ</a>
 </div>
 
 <div class="product">
-<img src="sarqanafa/WhatsApp Image 2026-10-07 at 14.20.11.jpeg" alt="سەرقەنەفە">
+<img src="sarqanafa/WhatsApp Image 2026-10-07 at 14.20.11.jpeg" alt="سەرقەنەفە" onclick="openModal(this)">
 <p>سەرقەنەفەی کەروێشکی پشت لاستیک ئەسڵی</p>
 <a class="whatsapp-order-btn" href="https://wa.me/9647721720505?text=سڵاو،%20دەمەوێت%20مۆدێلی%20(سەرقەنەفەی%20کەروێشکی%20پشت%20لاستیک%20ئەسڵی)%20داوا%20بکەم." target="_blank">📲 داواکردن لە واتسئاپ</a>
 </div>
 
 <div class="product">
-<img src="sarqanafa/WhatsApp Image 2026-10-07 at 14.20.12.jpeg" alt="سەرقەنەفە">
+<img src="sarqanafa/WhatsApp Image 2026-10-07 at 14.20.12.jpeg" alt="سەرقەنەفە" onclick="openModal(this)">
 <p>سەرقەنەفەی کەروێشکی پشت لاستیک ئەسڵی</p>
 <a class="whatsapp-order-btn" href="https://wa.me/9647721720505?text=سڵاو،%20دەمەوێت%20مۆدێلی%20(سەرقەنەفەی%20کەروێشکی%20پشت%20لاستیک%20ئەسڵی)%20داوا%20بکەم." target="_blank">📲 داواکردن لە واتسئاپ</a>
 </div>
 
 <div class="product">
-<img src="sarqanafa/WhatsApp Image 2026-10-07 at 14.20.13.jpeg" alt="سەرقەنەفە">
+<img src="sarqanafa/WhatsApp Image 2026-10-07 at 14.20.13.jpeg" alt="سەرقەنەفە" onclick="openModal(this)">
 <p>سەرقەنەفەی کەروێشکی پشت لاستیک ئەسڵی</p>
 <a class="whatsapp-order-btn" href="https://wa.me/9647721720505?text=سڵاو،%20دەمەوێت%20مۆدێلی%20(سەرقەنەفەی%20کەروێشکی%20پشت%20لاستیک%20ئەسڵی)%20داوا%20بکەم." target="_blank">📲 داواکردن لە واتسئاپ</a>
 </div>
 
 <div class="product">
-<img src="sarqanafa/WhatsApp Image 2026-10-07 at 14.20.14.jpeg" alt="سەرقەنەفە">
+<img src="sarqanafa/WhatsApp Image 2026-10-07 at 14.20.14.jpeg" alt="سەرقەنەفە" onclick="openModal(this)">
 <p>سەرقەنەفەی کەروێشکی پشت لاستیک ئەسڵی</p>
 <a class="whatsapp-order-btn" href="https://wa.me/9647721720505?text=سڵاو،%20دەمەوێت%20مۆدێلی%20(سەرقەنەفەی%20کەروێشکی%20پشت%20لاستیک%20ئەسڵی)%20داوا%20بکەم." target="_blank">📲 داواکردن لە واتسئاپ</a>
 </div>
 
 <div class="product">
-<img src="sarqanafa/WhatsApp Image 2026-10-07 at 14.20.15.jpeg" alt="سەرقەنەفە">
+<img src="sarqanafa/WhatsApp Image 2026-10-07 at 14.20.15.jpeg" alt="سەرقەنەفە" onclick="openModal(this)">
 <p>سەرقەنەفەی کەروێشکی پشت لاستیک ئەسڵی</p>
 <a class="whatsapp-order-btn" href="https://wa.me/9647721720505?text=سڵاو،%20دەمەوێت%20مۆدێلی%20(سەرقەنەفەی%20کەروێشکی%20پشت%20لاستیک%20ئەسڵی)%20داوا%20بکەم." target="_blank">📲 داواکردن لە واتسئاپ</a>
 </div>
 
 <div class="product">
-<img src="sarqanafa/WhatsApp Image 2026-10-07 at 14.20.16.jpeg" alt="سەرقەنەفە">
+<img src="sarqanafa/WhatsApp Image 2026-10-07 at 14.20.16.jpeg" alt="سەرقەنەفە" onclick="openModal(this)">
 <p>سەرقەنەفەی کەروێشکی پشت لاستیک ئەسڵی</p>
 <a class="whatsapp-order-btn" href="https://wa.me/9647721720505?text=سڵاو،%20دەمەوێت%20مۆدێلی%20(سەرقەنەفەی%20کەروێشکی%20پشت%20لاستیک%20ئەسڵی)%20داوا%20بکەم." target="_blank">📲 داواکردن لە واتسئاپ</a>
 </div>
@@ -441,6 +519,37 @@ footer {
 <footer>
 © کۆمپانیای ئاسیان الزەهەبی - سەرجەم مافەکان پارێزراون
 </footer>
+
+<!-- پەنجەرەی گەورەکردنی وێنە (Lightbox Modal) -->
+<div id="imageModal" onclick="closeModal()">
+    <span class="close-modal">&times;</span>
+    <img id="modalImg">
+    <div id="modalCaption"></div>
+</div>
+
+<!-- سکریپتی گەورەکردنی وێنەکان -->
+<script>
+function openModal(img) {
+    const modal = document.getElementById("imageModal");
+    const modalImg = document.getElementById("modalImg");
+    const captionText = document.getElementById("modalCaption");
+    
+    modal.style.display = "block";
+    modalImg.src = img.src;
+    
+    const productBox = img.closest('.product');
+    if (productBox) {
+        const caption = productBox.querySelector("p");
+        if (caption) {
+            captionText.innerHTML = caption.innerHTML;
+        }
+    }
+}
+
+function closeModal() {
+    document.getElementById("imageModal").style.display = "none";
+}
+</script>
 
 </body>
 </html>
